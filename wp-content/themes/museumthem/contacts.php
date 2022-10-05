@@ -41,7 +41,7 @@ Template Name: contacts
       <li class="burger-nav-item active">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: contacts
             <li class="nav-item active">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -199,7 +199,6 @@ Template Name: contacts
                 <span class="icon tel-icon"></span>
                 <a href="tel:74812380917"> <?php the_content() ?></a>
                 </span>
-                <br>
               </div>
           <?php }
           }
@@ -218,7 +217,7 @@ Template Name: contacts
             foreach ($myposts as $post) {
               setup_postdata($post);
           ?>
-              <div class="mail rf">
+              <div class="mail">
                 <span class="icon mail-icon"></span>
                 <a href="mailto:<?php the_content() ?>"><?php the_content() ?></a>
               </div>
