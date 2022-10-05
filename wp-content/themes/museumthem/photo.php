@@ -177,11 +177,11 @@ Template Name: photo
               <a href="/" class="bc-link">Главная</a>
             </li>
             <li class="bc-item">
-              <a href="/photo" class="bc-link">Фотогаллерея</a>
+              <a href="/photo" class="bc-link">Фотогалерея</a>
             </li>
           </ul>
         </div>
-        <h2 class="title">Фотогаллерея</h2>
+        <h2 class="title">Фотогалерея</h2>
         <ul class="photo-list">
           <li class="photo-item">
             <a href="#" class="img-link">

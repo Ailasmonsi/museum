@@ -1,9 +1,8 @@
 <?php
 /*
-Template Name: review
+Template Name: rewiew
 */
 ?>
-
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -42,7 +41,7 @@ Template Name: review
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item active">
+      <li class="burger-nav-item active">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item ">
@@ -156,7 +155,7 @@ Template Name: review
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item active">
+            <li class="nav-item active">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo ">
@@ -190,104 +189,29 @@ Template Name: review
             <input type="text" placeholder="Город">
             <input type="text" placeholder="Ваше мнение">
           </div>
-            <div class="captcha">
-              <span class="captcha-text">
-                Введите код который видите на картинке 
-              </span>
-              <div class="captcha-exmpl"></div>
-              <input class="captcha-answer"></input>
-            </div>
-            <div class="actions">
-              <button class="clear-btn">
-                Очистить
-                <span class="icon clear-icon"></span>
-              </button>
-              <button class="send-btn" type="submit">
-                Отправить
-                <span class="icon send-icon"></span>
-              </button>
+          <div class="captcha">
+            <span class="captcha-text">
+              Введите код который видите на картинке
+            </span>
+            <div class="captcha-exmpl"></div>
+            <input class="captcha-answer"></input>
+          </div>
+          <div class="actions">
+            <button class="clear-btn">
+              Очистить
+              <span class="icon clear-icon"></span>
+            </button>
+            <button class="send-btn" type="submit">
+              Отправить
+              <span class="icon send-icon"></span>
+            </button>
           </div>
         </form>
         <h2 class="title">Отзывы</h2>
-        <ul class="reviews">
-          <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-            </li> 
-          <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-            </li> 
-          <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-            </li> 
-        </ul>
-      </div>
 
+
+
+      </div>
     </section>
   </main>
 

@@ -206,43 +206,7 @@ Template Name: history
         </div>
       </nav>
       <div class="wrapper content-block">
-
-
-        <?php
-        global $post;
-
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'history'
-        ]);
-
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-
-            <div class="text"><?php the_content() ?></div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
-        <?php
-        global $post;
-
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'history-hide'
-        ]);
-
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-
-            <div class="text hide-content"><?php the_content() ?></div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
-        <button class="see-more-btn show-more">Читать дальше <span>></span></button>
+        <?php the_field('history-text') ?>
       </div>
     </section>
   </main>

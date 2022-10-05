@@ -41,7 +41,7 @@ Template Name: home
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: home
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			<li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -182,73 +182,15 @@ Template Name: home
     <section class="about-mus">
       <div class="wrapper">
 
-        <?php
-        global $post;
+        <h2 class="title">О музее</h2>
+        <div class="content content-block">
+          <div class="text-content">
+            <?php the_field('main-text') ?>
+          </div>
+          <img src="<?php the_field('main-img') ?>" alt="Изображения о музее" class="about-img hide-content">
 
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'description'
-        ]);
+        </div>
 
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-
-            <h2 class="title"><?php the_title() ?></h2>
-            <div class="content content-block">
-              <div class="text-content">
-                <p class="text">
-                  Смолян и гостей города приятно удивит центр-музей имени адмирала Нахимова,
-                  расположенный в центре города, в здании бывшей гостиницы «Гранд-Отель».
-                </p>
-                <p class="text">
-                  В дни празднования 200-летия со дня рождения адмирала, в июле 2002 г., центр-музей принял
-                  первых
-                  экскурсантов. В шести залах центра-музея рассказывается о богатой морской истории Смоленской
-                  земли, на сотни километров удаленной от морей и океанов, но связанной с ними многочисленными
-                  реками.
-                </p>
-                <p class="text">
-                  Многие поколения смолян со времен Петра I участвовали в формировании и развитии ВМФ России.
-                  Сухопутная Смоленщина дала более ста адмиралов и генералов Российского флота. Известны
-                  морские
-                  династии смоленских дворян Рыковых, Воеводских, Верховских, Нахимовых, Кернов, Белавенцев,
-                  Колтовских и др. У истоков создания Черноморского флота стоял сын Смоленской земли – князь
-                  Г.А.
-                  Потемкин – Таврический. Погиб, защищая Севастополь, герой Синопского сражения, адмирал П.С.
-                  Нахимов. Возрождал Черноморский флот после Крымской войны морской министр, адмирал И.А.
-                  Шестаков. Герой Советского Союза адмирал Э.Д. Балтин, командующий Черноморским флотом,
-                  отстаивал
-                  его целостность в конце XX в.
-                </p>
-                <p class="text hide-content">
-                  Посетителей центра-музея поражает многообразие экспонатов, картин художников-маринистов,
-                  скульптурных портретов, морских флагов. Более ста моделей парусных и современных кораблей,
-                  самолетов и вертолетов выполнены и подарены музею воином-интернационалистом В.К. Лапиным. В
-                  центре-музее проводятся мероприятия военно-патриотической направленности: акции, конкурсы,
-                  уроки
-                  мужества, встречи с ветеранами ВМФ и т.п. В кино-лекционном зале демонстрируются
-                  художественные,
-                  документальные и мультипликационные фильмы по морской тематике.
-                </p>
-                <p class="text hide-content">
-                  Молодежный центр-музей имени адмирала Нахимова всегда готов к сотрудничеству со всеми, кого
-                  волнует история Российского флота и его будущее.
-                </p>
-                <button class="see-more-btn show-more">Читать дальше <span>></span></button>
-              </div>
-              <!-- <img src="<?php bloginfo('template_url'); ?>/assets/content/img/about-mus-img.jpg" alt="Изображения о музее" class="about-img hide-content"> -->
-              <?php the_post_thumbnail(
-                '',
-                array(
-                  'class' => 'about-img hide-content'
-                )
-              ) ?>
-            </div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
       </div>
     </section>
     <section class="preview">
@@ -256,87 +198,56 @@ Template Name: home
         <h2 class="title">Анонсы мероприятий</h2>
         <div class="swiper second-swiper">
           <div class="swiper-wrapper">
-            <?php
-            global $post;
 
-            $myposts = get_posts([
-              'numberposts' => -1,
-              'category_name' => 'announcements'
-            ]);
-
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <div class="swiper-slide">
-                  <li class="card">
-                    <a href="/news-detail" class="img-link">
-                      <?php the_post_thumbnail(
-                        array(330, 290),
-                        array(
-                          'class' => 'card-img'
-                        )
-                      ) ?>
-                    </a>
-                    <a href="/news-detail">
-                      <h3 class="subtitle">
-                        <?php the_title(); ?>
-                      </h3>
-                    </a>
-                    <div class="date">
-                      <span class="icon calendar-icon"></span>
-                      <span class="--date"><?php the_date('d F Yг.') ?></span>
-                    </div>
-                    <div class="descr"><?php the_content() ?></div>
-                    <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
-                  </li>
+            <div class="swiper-slide">
+              <li class="card">
+                <a href="/news-detail" class="img-link">
+                  <img src="<?php the_field('event-img') ?>" alt="" class="card-img">
+                </a>
+                <a href="/news-detail">
+                  <h3 class="subtitle">
+                    <?php the_field('event-title') ?>
+                  </h3>
+                </a>
+                <div class="date">
+                  <span class="icon calendar-icon"></span>
+                  <span class="--date"><?php the_field('event-date') ?></span>
                 </div>
-            <?php }
-            }
-            wp_reset_postdata();  ?>
+                <div class="descr"><?php the_field('event-descriprion') ?></div>
+                <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
+              </li>
+            </div>
+
 
           </div>
           <div class="scrollbar"></div>
         </div>
-        <ul class="card-list">
-          <?php
-          global $post;
 
-          $myposts = get_posts([
-            'numberposts' => -1,
-            'category_name' => 'announcements'
-          ]);
+        <?php
+        $posts = get_field('event');
+        echo '<ul class="card-list">';
 
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
-          ?>
-              <li class="card">
-                <a href="/news-detail" class="img-link">
-                  <?php the_post_thumbnail(
-                    'large',
-                    array(
-                      'class' => 'card-img'
-                    )
-                  ) ?>
-                </a>
-                <a href="/news-detail">
-                  <h3 class="subtitle"><?php the_title(); ?></h3>
-                </a>
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date"><?php the_date('d F Yг.') ?></span>
-                </div>
-                <div class="descr"><?php the_content(); ?> </div>
-                <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
-              </li>
-          <?php }
-          }
-          wp_reset_postdata(); ?>
+        foreach ($posts as $post) {
+        ?>
+          <li class="card">
+            <a href="/news-detail" class="img-link">
+              <img src="<?= $post['event-img'] ?>" alt="" class="card-img">
+            </a>
+            <a href="/news-detail">
+              <h3 class="subtitle"><?= $post['event-title'] ?></h3>
+            </a>
+            <div class="date">
+              <span class="icon calendar-icon"></span>
+              <span class="--date"><?= $post['event-date'] ?></span>
+            </div>
+            <div class="descr"><?= $post['event-descriprion'] ?> </div>
+            <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
+          </li>
+        <?php
+        }
+        echo '</ul>';
+        ?>
 
-
-
-        </ul>
       </div>
     </section>
     <section class="reviews">
