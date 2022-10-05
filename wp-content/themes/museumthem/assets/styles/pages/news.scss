@@ -1,0 +1,15 @@
+@import '../vars';
+
+
+
+.news .wrapper {
+
+    flex-direction: column;
+    align-items: start;
+
+
+    .card-list {
+        margin-bottom: 125px;
+        row-gap: 6.0625rem;
+    }
+}

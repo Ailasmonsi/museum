@@ -1,0 +1,115 @@
+.find-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: rgba(0, 46, 72, 0.9);
+    z-index: 9999;
+    transition: transform 0.3s ease;
+
+    .toggle-find-btn {
+        position: absolute;
+        top: 56px;
+        right: 20px;
+        border: none;
+        background: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .finder {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2px solid #ffffff;
+        padding-bottom: 32px;
+    }
+
+    #finder-input {
+        width: 100%;
+        background: none;
+        border: none;
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2.0625rem;
+        color: #ffffff;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .heading {
+        align-self: start;
+        margin-top: 20px;
+        font-family: "Prata" !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 43px;
+        color: $white;
+    }
+
+    .rezults {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .rezults-list {
+        align-self: center;
+        margin-top: 20px;
+        list-style: decimal;
+        row-gap: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        color: $white;
+
+        .rezult-link {
+            padding-left: 40px;
+            width: 100%;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #ffffff !important;
+
+            text-decoration-color: rgba($color: #000000, $alpha: 0);
+
+            &:hover {
+                text-decoration: underline;
+                text-decoration-color: #ffffff;
+                transition: 0.15s;
+            }
+        }
+    }
+}
+
+.hidden {
+    transform: translateY(-200vh);
+}
+
+.ovrhdn {
+    overflow-y: hidden;
+}
+
+.dspn {
+    display: none !important;
+}

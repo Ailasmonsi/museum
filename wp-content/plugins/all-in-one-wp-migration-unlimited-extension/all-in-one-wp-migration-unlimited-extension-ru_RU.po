@@ -1,0 +1,480 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2022-07-01 11:05+0300\n"
+"PO-Revision-Date: 2022-07-01 11:13+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;_nx:1,2c;esc_attr__;esc_attr_e;esc_html__;"
+"esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: lib/controller/class-ai1wmue-main-controller.php:101
+#: lib/controller/class-ai1wmue-main-controller.php:102
+#: lib/view/settings/index.php:35
+msgid "Settings"
+msgstr "Настройки"
+
+#: lib/controller/class-ai1wmue-main-controller.php:209
+msgid "All-in-One WP Migration Command"
+msgstr "All-in-One WP Migration Команда"
+
+#: lib/controller/class-ai1wmue-main-controller.php:237
+msgid ""
+"Unlimited Extension requires <a href=\"https://wordpress.org/plugins/all-in-"
+"one-wp-migration/\" target=\"_blank\">All-in-One WP Migration plugin</a> to "
+"be activated. <a href=\"https://help.servmask.com/knowledgebase/install-"
+"instructions-for-unlimited-extension/\" target=\"_blank\">Unlimited "
+"Extension install instructions</a>"
+msgstr ""
+"Неограниченное расширение требует активации <a href=\"https://wordpress.org/"
+"plugins/all-in-one-wp-migration/\" target=\"_blank\">плагина All-in-One WP "
+"Migration</a> . <a href=\"https://help.servmask.com/knowledgebase/install-"
+"instructions-for-unlimited-extension/\" target=\"_blank\">Инструкции по "
+"установке неограниченного расширения</a>"
+
+#: lib/controller/class-ai1wmue-main-controller.php:338
+msgid "Done"
+msgstr "Готово"
+
+#: lib/controller/class-ai1wmue-main-controller.php:339
+msgid "Listing files ..."
+msgstr "Список файлов..."
+
+#: lib/controller/class-ai1wmue-main-controller.php:340
+msgid "No files selected"
+msgstr "Файлы не выбраны"
+
+#: lib/controller/class-ai1wmue-main-controller.php:341
+msgid "{x} files and {y} folders selected"
+msgstr "Выбрано {x} файлов и {y} папок"
+
+#: lib/controller/class-ai1wmue-main-controller.php:342
+msgid "{y} folders selected"
+msgstr "Выбрано {y} папок"
+
+#: lib/controller/class-ai1wmue-main-controller.php:343
+msgid "{x} files selected"
+msgstr "Выбрано {x} файлов"
+
+#: lib/controller/class-ai1wmue-main-controller.php:344
+msgid "{x} file selected"
+msgstr "Выбран {x} файл"
+
+#: lib/controller/class-ai1wmue-main-controller.php:345
+msgid "{x} file and {y} folders selected"
+msgstr "Выбрано {x} файла и {y} папки"
+
+#: lib/controller/class-ai1wmue-main-controller.php:346
+msgid "{x} file and {y} folder selected"
+msgstr "Выбран файл {x} и папка {y}"
+
+#: lib/controller/class-ai1wmue-main-controller.php:347
+msgid "{y} folder selected"
+msgstr "Выбрана {y} папка"
+
+#: lib/controller/class-ai1wmue-main-controller.php:348
+msgid "{x} files and {y} folder selected"
+msgstr "Выбраны файлы: {x} и папка: {y}"
+
+#: lib/controller/class-ai1wmue-main-controller.php:349
+#: lib/controller/class-ai1wmue-main-controller.php:431
+msgid "Name"
+msgstr "Имя "
+
+#: lib/controller/class-ai1wmue-main-controller.php:350
+#: lib/controller/class-ai1wmue-main-controller.php:432
+msgid "Date"
+msgstr "По дате"
+
+#: lib/controller/class-ai1wmue-main-controller.php:351
+msgid "Click checkbox to toggle selection"
+msgstr "Установите флажок, чтобы переключить выбор"
+
+#: lib/controller/class-ai1wmue-main-controller.php:352
+msgid "Click folder name to expand"
+msgstr "Щелкните имя папки, чтобы развернуть"
+
+#: lib/controller/class-ai1wmue-main-controller.php:353
+msgid "Something went wrong, please refresh and try again"
+msgstr "Что-то пошло не так, обновите страницу и повторите попытку."
+
+#: lib/controller/class-ai1wmue-main-controller.php:354
+msgid "Clear selection"
+msgstr "Очистить выбор"
+
+#: lib/controller/class-ai1wmue-main-controller.php:355
+msgid "Folder empty. Click on folder icon to close it."
+msgstr "Папка пуста. Щелкните значок папки, чтобы закрыть ее."
+
+#: lib/controller/class-ai1wmue-main-controller.php:430
+msgid "Change"
+msgstr "Изменить"
+
+#: lib/controller/class-ai1wmue-main-controller.php:433
+msgid "No folders to list. Click on the navbar to go back."
+msgstr "Нет папок для списка. Нажмите на панель навигации, чтобы вернуться."
+
+#: lib/controller/class-ai1wmue-main-controller.php:434
+msgid "Select with a click"
+msgstr "Выберите одним щелчком мыши"
+
+#: lib/controller/class-ai1wmue-main-controller.php:435
+msgid "Open with two clicks"
+msgstr "Открыть в два клика"
+
+#: lib/controller/class-ai1wmue-main-controller.php:436
+msgid "Close"
+msgstr "Закрыть"
+
+#: lib/controller/class-ai1wmue-main-controller.php:437
+msgid "Select folder &gt;"
+msgstr "Выберите папку &gt;"
+
+#: lib/controller/class-ai1wmue-main-controller.php:438
+msgid "more"
+msgstr "больше"
+
+#: lib/controller/class-ai1wmue-main-controller.php:439
+msgid "less"
+msgstr "свернуть"
+
+#: lib/controller/class-ai1wmue-main-controller.php:465
+msgid ""
+"<a href=\"https://help.servmask.com/knowledgebase/unlimited-extension-user-"
+"guide/\" target=\"_blank\">User Guide</a>"
+msgstr ""
+"<a href=\"https://help.servmask.com/knowledgebase/unlimited-extension-user-"
+"guide/\" target=\"_blank\">Гид пользователя</a>"
+
+#: lib/controller/class-ai1wmue-main-controller.php:466
+msgid ""
+"<a href=\"https://servmask.com/contact-support\" target=\"_blank\">Contact "
+"Support</a>"
+msgstr ""
+"<a href=\"https://servmask.com/contact-support\" target=\"_blank"
+"\">Контактная поддержка</a>"
+
+#: lib/controller/class-ai1wmue-settings-controller.php:88
+msgid "Your changes have been saved."
+msgstr "Ваши изменения были сохранены."
+
+#: lib/model/import/class-ai1wmue-import-database.php:37
+msgid "Updating settings..."
+msgstr "Обновление настроек..."
+
+#: lib/model/import/class-ai1wmue-import-database.php:55
+msgid "Done updating settings."
+msgstr "Выполнено обновление настроек."
+
+#: lib/model/import/class-ai1wmue-import-settings.php:35
+msgid "Getting settings..."
+msgstr "Получение настроек..."
+
+#: lib/model/import/class-ai1wmue-import-settings.php:49
+msgid "Done getting settings."
+msgstr "Получение настроек завершено."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:36
+msgid "Extension requires All-in-One WP Migration plugin to be activated. "
+msgstr "Расширение требует активации плагина All-in-One WP Migration."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:37
+msgid ""
+"You can get a copy of it here: https://wordpress.org/plugins/all-in-one-wp-"
+"migration/"
+msgstr ""
+"Вы можете получить его копию здесь: https://wordpress.org/plugins/all-in-one-"
+"wp-migration/"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:46
+msgid ""
+"WordPress Multisite is supported via our All-in-One WP Migration Multisite "
+"Extension."
+msgstr ""
+"Мультисайт WordPress поддерживается с помощью нашего многофункционального "
+"расширения WP Migration All-in-One."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:47
+msgid ""
+"You can get a copy of it here: https://servmask.com/products/multisite-"
+"extension"
+msgstr ""
+"Вы можете получить его копию здесь: https://servmask.com/products/multisite-"
+"extension"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:57
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:69
+#, php-format
+msgid ""
+"All-in-One WP Migration is not able to create <strong>%s</strong> folder."
+msgstr "All-in-One WP Migration не может создать папку <strong>%s</strong> ."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:58
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:70
+msgid ""
+"You will need to create this folder and grant it read/write/execute "
+"permissions (0777) for the All-in-One WP Migration plugin to function "
+"properly."
+msgstr ""
+"Вам нужно будет создать эту папку и предоставить ей права на чтение/запись/"
+"выполнение (0777) для правильной работы плагина All-in-One WP Migration."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:211
+msgid "A site with this ID does not exist."
+msgstr "Сайт с таким идентификатором не существует."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:212
+msgid "To list the sites type `l`."
+msgstr "Чтобы перечислить сайты, введите `l`."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:237
+msgid "Backup complete."
+msgstr "Резервное копирование завершено."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:238
+#, php-format
+msgid "Backup file: %s"
+msgstr "Резервный файл: %s"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:239
+#, php-format
+msgid "Backup location: %s"
+msgstr "Расположение резервной копии: %s"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:264
+msgid "Backup name"
+msgstr "Имя резервной копии"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:265
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:350
+msgid "Date created"
+msgstr "Дата создания"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:266
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:351
+msgid "Size"
+msgstr "Размер"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:275
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:362
+#, php-format
+msgid "%s ago"
+msgstr "%s назад"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:316
+msgid ""
+"A backup name must be provided in order to proceed with the list backup "
+"files process."
+msgstr ""
+"Необходимо указать имя резервной копии, чтобы продолжить процесс создания "
+"списка файлов резервных копий."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:317
+msgid "Example: wp ai1wm backup_files migration-wp-20170913-095743-931.wpress"
+msgstr "Пример: wp ai1wm backup_files migration-wp-20170913-095743-931.wpress"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:326
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:421
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:500
+msgid ""
+"The backup file could not be located in wp-content/ai1wm-backups folder."
+msgstr ""
+"Файл резервной копии не может быть расположен в папке wp-content/ai1wm-"
+"backups."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:327
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:422
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:501
+msgid "To list available backups use: wp ai1wm list-backups"
+msgstr ""
+"Чтобы получить список доступных резервных копий, используйте: wp ai1wm list-"
+"backups"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:349
+msgid "File name"
+msgstr "Имя файла"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:401
+msgid ""
+"A backup name must be provided in order to proceed with the extract process."
+msgstr ""
+"Чтобы продолжить процесс извлечения, необходимо указать имя резервной копии."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:402
+msgid ""
+"Example: wp ai1wm backup-extract migration-wp-20170913-095743-931.wpress"
+msgstr ""
+"Пример: wp ai1wm backup-extract migration-wp-20170913-095743-931.wpress"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:411
+msgid ""
+"A backup extract path must be provided and writable in order to proceed with "
+"the extract process."
+msgstr ""
+"Чтобы продолжить процесс извлечения, необходимо предоставить резервный путь "
+"извлечения и сделать его доступным для записи."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:412
+msgid ""
+"Example: wp ai1wm backup-extract migration-wp-20170913-095743-931.wpress --"
+"extract-path=/tmp"
+msgstr ""
+"Пример: wp ai1wm backup-extract migration-wp-20170913-095743-931.wpress --"
+"extract-path=/tmp"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:433
+msgid ""
+"The extract folder is not writable. Check that directory exists and writable."
+msgstr ""
+"Папка извлечения недоступна для записи. Убедитесь, что каталог существует и "
+"доступен для записи."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:457
+#, php-format
+msgid "Unable to extract files: %s"
+msgstr "Невозможно извлечь файлы: %s"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:490
+msgid ""
+"A backup name must be provided in order to proceed with the restore process."
+msgstr ""
+"Чтобы продолжить процесс восстановления, необходимо указать имя резервной "
+"копии."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:491
+msgid "Example: wp ai1wm restore migration-wp-20170913-095743-931.wpress"
+msgstr "Пример: wp ai1wm восстановление миграции-wp-20170913-095743-931.wpress"
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:519
+msgid "Restore in progress..."
+msgstr "Выполняется восстановление..."
+
+#: lib/vendor/servmask/command/class-ai1wm-backup-wp-cli-command.php:532
+msgid "Restore complete."
+msgstr "Восстановление выполнено."
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "show_less"
+msgstr "show_less"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "folder_browser_change"
+msgstr "folder_browser_change"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "title_name"
+msgstr "title_name"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "title_date"
+msgstr "title_date"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "empty_list_message"
+msgstr "empty_list_message"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "legend_select_info"
+msgstr "legend_select_info"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "legend_open_info"
+msgstr "legend_open_info"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "button_close"
+msgstr "button_close"
+
+#: lib/view/assets/javascript/settings.min.js:2
+msgid "button_select"
+msgstr "button_select"
+
+#: lib/view/export/cache-files.php:34
+msgid "Do <strong>not</strong> export cache (files)"
+msgstr "<strong>Не</strong> экспортировать кеш (файлы)"
+
+#: lib/view/export/cache-files.php:35 lib/view/export/exclude-files.php:35
+#: lib/view/export/inactive-plugins.php:35
+#: lib/view/export/inactive-themes.php:35
+msgid "new"
+msgstr "новый"
+
+#: lib/view/export/exclude-files.php:34
+msgid "Do <strong>not</strong> include the selected files"
+msgstr "<strong>Не</strong> включать выбранные файлы"
+
+#: lib/view/export/inactive-plugins.php:34
+msgid "Do <strong>not</strong> export inactive plugins (files)"
+msgstr "<strong>Не</strong> экспортировать неактивные плагины (файлы)"
+
+#: lib/view/export/inactive-themes.php:34
+msgid "Do <strong>not</strong> export inactive themes (files)"
+msgstr "<strong>Не</strong> экспортировать неактивные темы (файлы)"
+
+#: lib/view/import/pro.php:31
+msgid "Maximum upload file size: "
+msgstr "Максимальный размер файла: "
+
+#: lib/view/import/pro.php:32
+msgid "Unlimited"
+msgstr "Не ограничено "
+
+#: lib/view/settings/index.php:48
+msgid "Retention settings"
+msgstr "Настройки хранения"
+
+#: lib/view/settings/index.php:52
+msgid "Keep the most recent"
+msgstr "Держите самые последние"
+
+#: lib/view/settings/index.php:55
+msgid "backups. <small>Default: <strong>0</strong> unlimited</small>"
+msgstr ""
+"резервные копии. <small>По умолчанию: <strong>0</strong> неограниченно</"
+"small>"
+
+#: lib/view/settings/index.php:60
+msgid "Limit the total size of backups to"
+msgstr "Ограничьте общий размер резервных копий до"
+
+#: lib/view/settings/index.php:64
+msgid "MB"
+msgstr "МБ"
+
+#: lib/view/settings/index.php:65
+msgid "GB"
+msgstr "Гб"
+
+#: lib/view/settings/index.php:67
+msgid "<small>Default: <strong>0</strong> unlimited</small>"
+msgstr "<small>По умолчанию: <strong>0</strong> неограниченно</small>"
+
+#: lib/view/settings/index.php:72
+msgid "Remove backups older than "
+msgstr "Удалять резервные копии старше"
+
+#: lib/view/settings/index.php:75
+msgid "days. <small>Default: <strong>0</strong> off</small>"
+msgstr "дней. <small>По умолчанию: <strong>0</strong> выкл.</small>"
+
+#: lib/view/settings/index.php:80
+msgid "Backups directory"
+msgstr "Каталог резервных копий"
+
+#: lib/view/settings/index.php:88
+msgid "Update"
+msgstr "Обновить"
+
+#: lib/view/settings/index.php:101
+msgid "Leave Feedback"
+msgstr "Оставьте отзыв"

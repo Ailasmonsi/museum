@@ -1,0 +1,108 @@
+.r-center .wrapper {
+  flex-direction: column;
+  align-items: start;
+}
+.r-center .date {
+  margin-bottom: 27px;
+}
+.r-center .text-content {
+  margin-bottom: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 1.5rem;
+}
+.r-center .text {
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+.r-center .first-swiper {
+  max-height: none;
+}
+.r-center .swiper-slide .image {
+  margin: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.r-center .swiper-navigation {
+  margin-top: 80px;
+  margin-bottom: 105px;
+}
+.r-center .vol-list {
+  width: 100% !important;
+  margin-bottom: 79px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #251959;
+  border-radius: 20px;
+}
+.r-center .vol-list li {
+  width: 100%;
+  max-width: 316px;
+  padding: 15px;
+  margin: 0;
+}
+.r-center .vol-list .category-item {
+  max-width: 316px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(88, 71, 168, 0.5);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+  border-radius: 5px;
+  padding-right: 15px;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.13s ease;
+}
+.r-center .vol-list .category-item:hover {
+  color: #fff;
+  background-color: rgba(229, 48, 111, 0.8);
+}
+.r-center .vol-list .category-item:active {
+  transform: translateY(2px);
+  transition: 0.13s;
+}
+.r-center .vol-list .category-item .category-item__icon {
+  margin-right: 15px;
+  height: 163px;
+}
+.r-center .vol-list .category-item .category-item__icon img {
+  height: 100%;
+  max-height: 163px;
+}
+.r-center .info {
+  width: 100%;
+  margin-bottom: 181px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.r-center .info address {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+.r-center .info .site-link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #999999;
+}
+.r-center .info .site-link:hover {
+  transition: 0.13s;
+  color: #000;
+}/*# sourceMappingURL=r-centre.css.map */

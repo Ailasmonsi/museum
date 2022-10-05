@@ -1,0 +1,8 @@
+.prices .wrapper {
+  flex-direction: column;
+  align-items: start;
+}
+.prices .breadcrumb {
+  margin-top: 2.4375rem;
+  margin-bottom: 3rem;
+}/*# sourceMappingURL=prices.css.map */

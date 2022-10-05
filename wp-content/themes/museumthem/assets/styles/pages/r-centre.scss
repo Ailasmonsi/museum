@@ -1,0 +1,124 @@
+@import "../vars.scss";
+
+.r-center {
+    .wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .date {
+        margin-bottom: 27px;
+    }
+
+    .text-content {
+        margin-bottom: 76px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        row-gap: 1.5rem;
+    }
+
+    .text {
+        font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+            "Trebuchet MS", sans-serif !important;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.1875rem;
+    }
+
+    .first-swiper {
+        max-height: none;
+    }
+
+    .swiper-slide {
+        .image {
+            margin: auto;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .swiper-navigation {
+        margin-top: 80px;
+        margin-bottom: 105px;
+    }
+
+    .vol-list {
+        width: 100% !important;
+        margin-bottom: 79px;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #251959;
+        border-radius: 20px;
+        li {
+            width: 100%;
+            max-width: 316px;
+            padding: 15px;
+            margin: 0;
+        }
+        .category-item {
+            max-width: 316px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: rgba(88, 71, 168, 0.5);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            font-size: 14px;
+            border-radius: 5px;
+            padding-right: 15px;
+            color: #fff;
+            cursor: pointer;
+            overflow: hidden;
+            transition: background-color 0.13s ease;
+            &:hover {
+                color: #fff;
+                background-color: rgba(229, 48, 111, 0.8);
+            }
+            &:active {
+                transform: translateY(2px);
+                transition: 0.13s;
+            }
+            .category-item__icon {
+                margin-right: 15px;
+                height: 163px;
+                img {
+                    height: 100%;
+                    max-height: 163px;
+                }
+            }
+        }
+    }
+
+    .info {
+        width: 100%;
+        margin-bottom: 181px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        address {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #999999;
+        }
+        .site-link {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #999999;
+
+            &:hover {
+                transition: 0.13s;
+                color: #000;
+            }
+        }
+    }
+}

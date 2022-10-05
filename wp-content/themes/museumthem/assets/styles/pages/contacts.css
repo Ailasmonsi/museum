@@ -1,0 +1,98 @@
+.contacts .wrapper {
+  flex-direction: column;
+  align-items: start;
+}
+.contacts .title--litle {
+  margin-bottom: 2.1875rem;
+}
+.contacts .telnumber {
+  display: inline-block;
+}
+.contacts .telnumber .tel-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.contacts .mail {
+  display: inline-block;
+}
+.contacts .mail .mail-icon {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.contacts .contact {
+  margin-bottom: 88px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 88px;
+}
+.contacts .content {
+  width: 100%;
+  margin-bottom: 14.0625rem;
+  display: flex;
+  align-items: start;
+  -moz-column-gap: 3.75rem;
+       column-gap: 3.75rem;
+  justify-content: space-between;
+}
+.contacts .content .info {
+  font-family: "Roboto" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #333;
+}
+.contacts .content .map {
+  height: 20rem;
+  width: 100%;
+  max-width: 42rem;
+}
+.contacts .content .subtitle {
+  margin-bottom: 0.9375rem;
+  font-family: "Open Sans" !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.0625rem;
+  color: #333;
+}
+.contacts .content .icon {
+  margin-right: 0.625rem;
+}
+.contacts .content address {
+  display: flex;
+  align-items: start;
+}
+.contacts .content .timedate {
+  display: flex;
+  align-items: start;
+}
+.contacts .content .telnumber {
+  display: flex;
+  align-items: start;
+}
+.contacts .content .buy-btn {
+  width: 12.5rem;
+  height: 3rem;
+  margin-top: 2.0625rem;
+  background-color: #5F7489;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  transition: background-color 0.13s ease;
+}
+.contacts .content .buy-btn:hover {
+  background-color: #002E48;
+}
+.contacts .content .buy-btn:active {
+  transition: 0.13s;
+  transform: translateY(4px);
+}/*# sourceMappingURL=contacts.css.map */

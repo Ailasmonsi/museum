@@ -1,0 +1,119 @@
+@import "../vars";
+
+.contacts {
+    .wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .title--litle {
+        margin-bottom: 2.1875rem;
+    }
+
+    .telnumber {
+        display: inline-block;
+
+        .tel-icon {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+
+    .mail {
+        display: inline-block;
+
+        .mail-icon {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+
+    .contact {
+        margin-bottom: 88px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: start;
+        gap: 88px;
+    }
+
+    .content {
+        width: 100%;
+        margin-bottom: 14.0625rem;
+        display: flex;
+        align-items: start;
+        column-gap: 3.75rem;
+        justify-content: space-between;
+
+        .info {
+            font-family: "Roboto" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.1875rem;
+            color: $grey;
+        }
+
+        .map {
+            height: 20rem;
+            width: 100%;
+            max-width: 42rem;
+        }
+
+        .subtitle {
+            margin-bottom: 0.9375rem;
+            font-family: "Open Sans" !important;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.5rem;
+            line-height: 2.0625rem;
+            color: $grey;
+        }
+
+        .icon {
+            margin-right: 0.625rem;
+        }
+
+        address {
+            display: flex;
+            align-items: start;
+        }
+
+        .timedate {
+            display: flex;
+            align-items: start;
+        }
+
+        .telnumber {
+            display: flex;
+            align-items: start;
+        }
+
+        .buy-btn {
+            width: 12.5rem;
+            height: 3rem;
+            margin-top: 2.0625rem;
+            background-color: $blue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+
+            color: #ffffff;
+            transition: background-color 0.13s ease;
+
+            &:hover {
+                background-color: $dark-blue;
+            }
+
+            &:active {
+                transition: 0.13s;
+                transform: translateY(4px);
+            }
+        }
+    }
+}

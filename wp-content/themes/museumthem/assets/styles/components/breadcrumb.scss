@@ -1,0 +1,37 @@
+.bc-list {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+
+    .bc-item {
+        position: relative;
+
+        .bc-link {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $light-grey;
+
+            &:hover {
+                transition: .13s;
+                color: $dark;
+            }
+        }
+    }
+
+    .bc-item:not(:first-child)::before {
+        position: relative;
+        left: -7px;
+        content: '/';
+        display: inline-block;
+        color: $light-grey;
+
+    }
+}
+
+.breadcrumb {
+    margin-top: 2.4375rem;
+    margin-bottom: 3rem;
+}

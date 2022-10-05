@@ -1,0 +1,74 @@
+.history {
+    margin-bottom: 76px;
+
+    .wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    nav {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 3.75rem;
+        background: #ededed;
+    }
+
+    .page-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+        .page-btn {
+            height: 3.125rem;
+            max-width: 215px;
+            padding: 0px 20px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1rem;
+            color: $grey;
+            text-align: left;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.13s;
+                color: #fff !important;
+                background: #5f748880 !important;
+            }
+        }
+    }
+
+    .text {
+        max-width: 54.375rem;
+        margin-bottom: 26px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.1875rem;
+        color: $dark;
+        text-align: justify;
+    }
+
+    p.hide-content {
+        // font-size: 15px;
+        // line-height: 1.1875rem;
+    }
+
+    .see-more-btn {
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 85px;
+        cursor: pointer;
+    }
+
+    button {
+        border: none;
+        background: none;
+    }
+
+    .selected {
+        color: #fff !important;
+        background: $blue !important;
+    }
+}

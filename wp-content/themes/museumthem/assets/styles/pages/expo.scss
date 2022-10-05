@@ -1,0 +1,59 @@
+.expo {
+    .wrapper {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .menu-list {
+        margin-top: 1.6875rem;
+        margin-bottom: 5.625rem;
+        display: flex;
+        align-items: center;
+        column-gap: .9375rem;
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.1875rem;
+            color: $grey;
+            transition: color .13s ease;
+
+            &:hover {
+                color: $blue !important;
+            }
+        }
+    }
+
+    .swiper {
+        max-height: none;
+
+        img {
+            width: 100%;
+            max-width: 608px;
+        }
+    }
+
+    .swiper-navigation {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+
+    .text {
+        margin-bottom: 7.5rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.1875rem;
+        color: $grey;
+    }
+
+
+    .now {
+        color: $blue !important;
+    }
+}
