@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: rewiew
+Template Name: review
 */
 ?>
 
@@ -210,8 +210,47 @@ Template Name: rewiew
         <h2 class="title">Отзывы</h2>
 
 
+        <?php
+        $reviews = get_field('review');
+        echo '<ul class="reviews">';
+        foreach ($reviews as $review) {
+        ?>
+
+          <li class="review-card">
+            <div class="date">
+              <span class="icon calendar-icon"></span>
+              <span class="--date"><?= $review['review-date'] ?></span>
+            </div>
+            <p class="text">
+              <?= $review['review-text'] ?>
+            </p>
+            <div class="location">
+              <span class="icon location-icon"></span>
+              <span class="--location"><?= $review['review-location'] ?></span>
+            </div>
+            <div class="profile">
+              <a href="#" class="avatar-link">
+                <img src="<?= $review['review-img'] ?>" alt="Аватар пользователя" class="avatar">
+              </a>
+              <a href="#" class="name-link">
+                <span class="name"><?= $review['review-name'] ?></span>
+              </a>
+            </div>
+          </li>
+
+
+        <?php
+        }
+        echo '</ul>'
+        ?>
+
+
+
+
+
 
       </div>
+
     </section>
   </main>
 

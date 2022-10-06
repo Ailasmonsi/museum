@@ -255,143 +255,40 @@ Template Name: home
         <h2 class="title">Отзывы</h2>
         <!-- <ul class="reviews-list"> -->
         <div class="swiper first-swiper">
-          <div class="swiper-wrapper">
+
+
+          <?php
+                $reviewes = get_field('review', 227);
+                echo '<div class="swiper-wrapper">';
+                foreach ($reviewes as $review) {
+                ?>
             <div class="swiper-slide">
               <li class="review-card">
                 <div class="date">
                   <span class="icon calendar-icon"></span>
-                  <span class="--date">31 июля 2022г.</span>
+                  <span class="--date"><?= $review['review-date'] ?></span>
                 </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
+                <p class="text">
+                  <?= $review['review-text'] ?>
                 </p>
                 <div class="location">
                   <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
+                  <span class="--location"><?= $review['review-location'] ?></span>
                 </div>
                 <div class="profile">
                   <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
+                    <img src="<?= $review['review-img'] ?>" alt="Аватар пользователя" class="avatar">
                   </a>
                   <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
+                    <span class="name"><?= $review['review-name'] ?></span>
                   </a>
                 </div>
               </li>
             </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-          </div>
+          <?php
+                }
+                echo '</div>'
+          ?>
         </div>
         <div class="swiper-navigation">
           <div class="swp-button swiper-button-prev">

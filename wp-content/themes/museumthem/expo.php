@@ -41,7 +41,7 @@ Template Name: expo
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: expo
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -205,36 +205,18 @@ Template Name: expo
           </ul>
         </nav>
         <div class="swiper first-swiper">
-          <div class="swiper-wrapper">
-
-            <?php
-            global $post;
-
-            $myposts = get_posts([
-              'numberposts' => -1,
-              'category_name' => 'expo-1-slider'
-            ]);
-
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <div class="swiper-slide">
-                  <?php the_post_thumbnail(
-                    array(500, 330),
-                    array(
-                      'class' => 'img'
-                    )
-                  ) ?>
-                </div>
-
-            <?php }
-            }
-            wp_reset_postdata(); ?>
-
-
-
-          </div>
+          <?php
+          $photos = get_field('galery');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
         </div>
         <div class="swiper-navigation">
           <div class="swp-button swiper-button-prev">
@@ -251,23 +233,7 @@ Template Name: expo
 
           </div>
         </div>
-
-        <?php
-        global $post;
-
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'expo-1'
-        ]);
-
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-            <div class="text"> <?php the_content() ?></div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
+        <div class="text"> <?php the_field('expo-info') ?></div>
       </div>
     </section>
   </main>
