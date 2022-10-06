@@ -188,46 +188,54 @@ Template Name: home
             <?php the_field('main-text') ?>
           </div>
           <img src="<?php the_field('main-img') ?>" alt="Изображения о музее" class="about-img hide-content">
-
         </div>
-
       </div>
     </section>
+
     <section class="preview">
       <div class="wrapper">
         <h2 class="title">Анонсы мероприятий</h2>
         <div class="swiper second-swiper">
-          <div class="swiper-wrapper">
-
+          <?php
+          $posts_count = get_field('event-counter');
+          $posts = get_field('event', 21);
+          $counter = 0;
+          echo '<div class="swiper-wrapper">';
+          foreach ($posts as $post) {
+            
+            if ($counter >= $posts_count) break;
+          ?>
             <div class="swiper-slide">
               <li class="card">
                 <a href="/news-detail" class="img-link">
-                  <img src="<?php the_field('event-img') ?>" alt="" class="card-img">
+                  <img src="<?= $post['event-img'] ?>" alt="" class="card-img">
                 </a>
                 <a href="/news-detail">
                   <h3 class="subtitle">
-                    <?php the_field('event-title') ?>
+                    <?= $post['event-title'] ?>
                   </h3>
                 </a>
                 <div class="date">
                   <span class="icon calendar-icon"></span>
-                  <span class="--date"><?php the_field('event-date') ?></span>
+                  <span class="--date"><?= $post['event-date'] ?></span>
                 </div>
-                <div class="descr"><?php the_field('event-descriprion') ?></div>
+                <div class="descr"><?= $post['event-descriprion'] ?></div>
                 <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
               </li>
             </div>
-
-
-          </div>
+          <?php
+            $counter++;
+          }
+          echo '</div>';
+          ?>
           <div class="scrollbar"></div>
         </div>
 
         <?php
-        $posts = get_field('event');
         echo '<ul class="card-list">';
-
+        $counter = 0;
         foreach ($posts as $post) {
+          if ($counter >= $posts_count) break;
         ?>
           <li class="card">
             <a href="/news-detail" class="img-link">
@@ -244,12 +252,13 @@ Template Name: home
             <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
           </li>
         <?php
+          $counter++;
         }
         echo '</ul>';
         ?>
-
       </div>
     </section>
+
     <section class="reviews">
       <div class="wrapper">
         <h2 class="title">Отзывы</h2>
@@ -258,10 +267,10 @@ Template Name: home
 
 
           <?php
-                $reviewes = get_field('review', 227);
-                echo '<div class="swiper-wrapper">';
-                foreach ($reviewes as $review) {
-                ?>
+          $reviewes = get_field('review', 227);
+          echo '<div class="swiper-wrapper">';
+          foreach ($reviewes as $review) {
+          ?>
             <div class="swiper-slide">
               <li class="review-card">
                 <div class="date">
@@ -286,8 +295,8 @@ Template Name: home
               </li>
             </div>
           <?php
-                }
-                echo '</div>'
+          }
+          echo '</div>'
           ?>
         </div>
         <div class="swiper-navigation">

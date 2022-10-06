@@ -41,7 +41,7 @@ Template Name: news
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: news
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -181,40 +181,33 @@ Template Name: news
           </ul>
         </div>
         <h2 class="title">Новости</h2>
-        <ul class="card-list">
 
-          <?php
-          global $post;
 
-          $myposts = get_posts([
-            'numberposts' => -1,
-            'category_name' => 'news'
-          ]);
+        <?php
+        $posts = get_field('event');
+        echo '<ul class="card-list">';
+        foreach ($posts as $post) {
+        ?>
+          <li class="card">
+            <a href="/news-detail" class="img-link">
+              <img src="<?= $post['event-img'] ?>" alt="" class="card-img">
+            </a>
+            <a href="/news-detail">
+              <h3 class="subtitle"><?= $post['event-title'] ?></h3>
+            </a>
+            <div class="date">
+              <span class="icon calendar-icon"></span>
+              <span class="--date"><?= $post['event-date'] ?></span>
+            </div>
+            <div class="descr"><?= $post['event-descriprion'] ?> </div>
+            <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
+          </li>
+        <?php
+        }
+        echo '</ul>';
+        ?>
 
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
-          ?>
-              <li class="card">
-                <a href="/news-detail" class="img-link">
-                  <?php the_post_thumbnail(
-                    array(330, 290),
-                    array(
-                      'class' => 'card-img'
-                    )
-                  ) ?>
-                </a>
-                <h3 class="subtitle"><?php the_title() ?></h3>
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date"><?php the_date('d F Yг.') ?></span>
-                </div>
-                <div class="descr"><?php the_content() ?></div>
-                <a href="/news-detail" class="btn outline-btn btn-more" role="link">Подробнее</a>
-              </li>
-          <?php }
-          }
-          wp_reset_postdata(); ?>
+
 
         </ul>
       </div>
