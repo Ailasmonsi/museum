@@ -41,7 +41,7 @@ Template Name: expo
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: expo
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -170,14 +170,14 @@ Template Name: expo
 
   <main>
     <section class="expo">
-      <div class="wrapper">
+      <div class="wrapper hall-body _active">
         <div class="breadcrumb">
           <ul class="bc-list">
             <li class="bc-item">
               <a href="/" class="bc-link">Главная</a>
             </li>
             <li class="bc-item">
-              <a href="/expo" class="bc-link">Экспозиция</a>
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
             </li>
           </ul>
         </div>
@@ -205,69 +205,348 @@ Template Name: expo
           </ul>
         </nav>
         <div class="swiper first-swiper">
-          <div class="swiper-wrapper">
-
-            <?php
-            global $post;
-
-            $myposts = get_posts([
-              'numberposts' => -1,
-              'category_name' => 'expo-1-slider'
-            ]);
-
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <div class="swiper-slide">
-                  <?php the_post_thumbnail(
-                    array(500, 330),
-                    array(
-                      'class' => 'img'
-                    )
-                  ) ?>
-                </div>
-
-            <?php }
-            }
-            wp_reset_postdata(); ?>
-
-
-
+          <?php
+          $photos = get_field('galery-1');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
           </div>
+          <div class="text"> <?php the_field('expo-info-1') ?></div>
         </div>
-        <div class="swiper-navigation">
-          <div class="swp-button swiper-button-prev">
-            <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
-            </svg>
-
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swp-button swiper-button-next">
-            <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
-            </svg>
-
-          </div>
+      </div>
+      <div class="wrapper hall-body">
+        <div class="breadcrumb">
+          <ul class="bc-list">
+            <li class="bc-item">
+              <a href="/" class="bc-link">Главная</a>
+            </li>
+            <li class="bc-item">
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
+            </li>
+          </ul>
         </div>
-
-        <?php
-        global $post;
-
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'expo-1'
-        ]);
-
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-            <div class="text"> <?php the_content() ?></div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
+        <h2 class="title">Второй зал</h2>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="menu-btn ">Первый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn now">Второй зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Третий зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Четвертый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Пятый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Шестой зал</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper first-swiper">
+          <?php
+          $photos = get_field('galery-2');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+          </div>
+          <div class="text"> <?php the_field('expo-info-2') ?></div>
+        </div>
+      </div>
+      <div class="wrapper hall-body">
+        <div class="breadcrumb">
+          <ul class="bc-list">
+            <li class="bc-item">
+              <a href="/" class="bc-link">Главная</a>
+            </li>
+            <li class="bc-item">
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title">Третий зал</h2>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="menu-btn ">Первый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Второй зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn now">Третий зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Четвертый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Пятый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Шестой зал</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper first-swiper">
+          <?php
+          $photos = get_field('galery-3');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+          </div>
+          <div class="text"> <?php the_field('expo-info-3') ?></div>
+        </div>
+      </div>
+      <div class="wrapper hall-body">
+        <div class="breadcrumb">
+          <ul class="bc-list">
+            <li class="bc-item">
+              <a href="/" class="bc-link">Главная</a>
+            </li>
+            <li class="bc-item">
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title">Четвертый зал</h2>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="menu-btn ">Первый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Второй зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Третий зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn now">Четвертый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Пятый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Шестой зал</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper first-swiper">
+          <?php
+          $photos = get_field('galery-4');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+          </div>
+          <div class="text"> <?php the_field('expo-info-4') ?></div>
+        </div>
+      </div>
+      <div class="wrapper hall-body">
+        <div class="breadcrumb">
+          <ul class="bc-list">
+            <li class="bc-item">
+              <a href="/" class="bc-link">Главная</a>
+            </li>
+            <li class="bc-item">
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title">Пятый зал</h2>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="menu-btn ">Первый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Второй зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Третий зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Четвертый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn now">Пятый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Шестой зал</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper first-swiper">
+          <?php
+          $photos = get_field('galery-5');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+          </div>
+          <div class="text"> <?php the_field('expo-info-5') ?></div>
+        </div>
+      </div>
+      <div class="wrapper hall-body">
+        <div class="breadcrumb">
+          <ul class="bc-list">
+            <li class="bc-item">
+              <a href="/" class="bc-link">Главная</a>
+            </li>
+            <li class="bc-item">
+              <a href="/expo-1" class="bc-link">Экспозиция</a>
+            </li>
+          </ul>
+        </div>
+        <h2 class="title">Шестой зал</h2>
+        <nav>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <button class="menu-btn ">Первый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Второй зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Третий зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Четвертый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn">Пятый зал</button>
+            </li>
+            <li class="menu-item">
+              <button class="menu-btn Шестой">Шестой зал</button>
+            </li>
+          </ul>
+        </nav>
+        <div class="swiper first-swiper">
+          <?php
+          $photos = get_field('galery-6');
+          echo '<div class="swiper-wrapper">';
+          foreach ($photos as $photo) {
+          ?>
+            <div class="swiper-slide">
+              <img src=" <?= $photo ?> " alt="" class="img">
+            </div>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
+            </div>
+          </div>
+          <div class="text"> <?php the_field('expo-info-6') ?></div>
+        </div>
       </div>
     </section>
   </main>

@@ -41,7 +41,7 @@ Template Name: home
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: home
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			<li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -168,7 +168,7 @@ Template Name: home
     </div>
   </header>
 
-  <main class="main">
+  <main class="main" data-main>
     <section class="banner">
       <div class="wrapper">
         <h2 class="subheading">
@@ -182,323 +182,192 @@ Template Name: home
     <section class="about-mus">
       <div class="wrapper">
 
-        <?php
-        global $post;
-
-        $myposts = get_posts([
-          'numberposts' => 1,
-          'category_name' => 'description'
-        ]);
-
-        if ($myposts) {
-          foreach ($myposts as $post) {
-            setup_postdata($post);
-        ?>
-
-            <h2 class="title"><?php the_title() ?></h2>
-            <div class="content content-block">
-              <div class="text-content">
-                <p class="text">
-                  Смолян и гостей города приятно удивит центр-музей имени адмирала Нахимова,
-                  расположенный в центре города, в здании бывшей гостиницы «Гранд-Отель».
-                </p>
-                <p class="text">
-                  В дни празднования 200-летия со дня рождения адмирала, в июле 2002 г., центр-музей принял
-                  первых
-                  экскурсантов. В шести залах центра-музея рассказывается о богатой морской истории Смоленской
-                  земли, на сотни километров удаленной от морей и океанов, но связанной с ними многочисленными
-                  реками.
-                </p>
-                <p class="text">
-                  Многие поколения смолян со времен Петра I участвовали в формировании и развитии ВМФ России.
-                  Сухопутная Смоленщина дала более ста адмиралов и генералов Российского флота. Известны
-                  морские
-                  династии смоленских дворян Рыковых, Воеводских, Верховских, Нахимовых, Кернов, Белавенцев,
-                  Колтовских и др. У истоков создания Черноморского флота стоял сын Смоленской земли – князь
-                  Г.А.
-                  Потемкин – Таврический. Погиб, защищая Севастополь, герой Синопского сражения, адмирал П.С.
-                  Нахимов. Возрождал Черноморский флот после Крымской войны морской министр, адмирал И.А.
-                  Шестаков. Герой Советского Союза адмирал Э.Д. Балтин, командующий Черноморским флотом,
-                  отстаивал
-                  его целостность в конце XX в.
-                </p>
-                <p class="text hide-content">
-                  Посетителей центра-музея поражает многообразие экспонатов, картин художников-маринистов,
-                  скульптурных портретов, морских флагов. Более ста моделей парусных и современных кораблей,
-                  самолетов и вертолетов выполнены и подарены музею воином-интернационалистом В.К. Лапиным. В
-                  центре-музее проводятся мероприятия военно-патриотической направленности: акции, конкурсы,
-                  уроки
-                  мужества, встречи с ветеранами ВМФ и т.п. В кино-лекционном зале демонстрируются
-                  художественные,
-                  документальные и мультипликационные фильмы по морской тематике.
-                </p>
-                <p class="text hide-content">
-                  Молодежный центр-музей имени адмирала Нахимова всегда готов к сотрудничеству со всеми, кого
-                  волнует история Российского флота и его будущее.
-                </p>
-                <button class="see-more-btn show-more">Читать дальше <span>></span></button>
-              </div>
-              <!-- <img src="<?php bloginfo('template_url'); ?>/assets/content/img/about-mus-img.jpg" alt="Изображения о музее" class="about-img hide-content"> -->
-              <?php the_post_thumbnail(
-                '',
-                array(
-                  'class' => 'about-img hide-content'
-                )
-              ) ?>
-            </div>
-        <?php }
-        }
-        wp_reset_postdata(); ?>
+        <h2 class="title">О музее</h2>
+        <div class="content content-block">
+          <div class="text-content">
+            <?php the_field('main-text') ?>
+          </div>
+          <img src="<?php the_field('main-img') ?>" alt="Изображения о музее" class="about-img hide-content">
+        </div>
       </div>
     </section>
+
     <section class="preview">
       <div class="wrapper">
         <h2 class="title">Анонсы мероприятий</h2>
         <div class="swiper second-swiper">
-          <div class="swiper-wrapper">
-            <?php
-            global $post;
-
-            $myposts = get_posts([
-              'numberposts' => -1,
-              'category_name' => 'announcements'
-            ]);
-
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <div class="swiper-slide">
-                  <li class="card">
-                    <a href="/news-detail" class="img-link">
-                      <?php the_post_thumbnail(
-                        array(330, 290),
-                        array(
-                          'class' => 'card-img'
-                        )
-                      ) ?>
-                    </a>
-                    <a href="/news-detail">
-                      <h3 class="subtitle">
-                        <?php the_title(); ?>
-                      </h3>
-                    </a>
-                    <div class="date">
-                      <span class="icon calendar-icon"></span>
-                      <span class="--date"><?php the_date('d F Yг.') ?></span>
-                    </div>
-                    <div class="descr"><?php the_content() ?></div>
-                    <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
-                  </li>
-                </div>
-            <?php }
-            }
-            wp_reset_postdata();  ?>
-
-          </div>
-          <div class="scrollbar"></div>
-        </div>
-        <ul class="card-list">
           <?php
-          global $post;
-
-          $myposts = get_posts([
-            'numberposts' => -1,
-            'category_name' => 'announcements'
-          ]);
-
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
+          $posts_count = get_field('event-counter');
+          $posts = get_field('event', 21);
+          echo '<div class="swiper-wrapper">';
+          for ($i = 0; $i < $posts_count; $i++) {
           ?>
+            <div class="swiper-slide">
               <li class="card">
-                <a href="/news-detail" class="img-link">
-                  <?php the_post_thumbnail(
-                    'large',
-                    array(
-                      'class' => 'card-img'
-                    )
-                  ) ?>
-                </a>
-                <a href="/news-detail">
-                  <h3 class="subtitle"><?php the_title(); ?></h3>
-                </a>
+                <div data-post data-value="<?= $i ?>" class="img-link">
+                  <img src="<?= $posts[$i]['event-img'] ?>" alt="" class="card-img">
+                </div>
+                <div class="subtitle" data-post data-value="<?= $i ?>">
+                </div>
                 <div class="date">
                   <span class="icon calendar-icon"></span>
-                  <span class="--date"><?php the_date('d F Yг.') ?></span>
+                  <span class="--date"><?= $posts[$i]['event-date'] ?></span>
                 </div>
-                <div class="descr"><?php the_content(); ?> </div>
-                <a href="#" class="btn outline-btn btn-more" role="link">Подробнее</a>
+                <div class="descr"><?= $posts[$i]['event-description'] ?></div>
+                <div data-post data-value="<?= $i ?>" class="btn outline-btn btn-more" role="link">Подробнее</div>
               </li>
-          <?php }
+            </div>
+          <?php
           }
-          wp_reset_postdata(); ?>
+          echo '</div>';
+          ?>
+          <div class="scrollbar"></div>
+        </div>
 
 
+        <?php
+        echo '<ul class="card-list">';
+        for ($i = 0; $i < $posts_count; $i++) {
+        ?>
+          <li class="card">
+            <div data-post data-value="<?= $i ?>" class="img-link">
+              <img src="<?= $posts[$i]['event-img'] ?>" alt="" class="card-img">
+            </div>
+            <div class="subtitle" data-post data-value="<?= $i ?>">
+              <?= $posts[$i]['event-title'] ?>
+            </div>
+            <div class="date">
+              <span class="icon calendar-icon"></span>
+              <span class="--date"><?= $posts[$i]['event-date'] ?></span>
+            </div>
+            <div class="descr"><?= $posts[$i]['event-description'] ?> </div>
+            <div data-post data-value="<?= $i ?>" class="btn outline-btn btn-more" role="link">
+              Подробнее
+            </div>
+          </li>
+        <?php
+        }
+        echo '</ul>';
+        ?>
 
-        </ul>
       </div>
     </section>
+
     <section class="reviews">
       <div class="wrapper">
         <h2 class="title">Отзывы</h2>
         <!-- <ul class="reviews-list"> -->
-        <div class="swiper first-swiper">
-          <div class="swiper-wrapper">
+        <div class="swiper first-swiper rr">
+          <?php
+          $reviewes = get_field('review', 227);
+          echo '<div class="swiper-wrapper">';
+          foreach ($reviewes as $review) {
+          ?>
             <div class="swiper-slide">
               <li class="review-card">
                 <div class="date">
                   <span class="icon calendar-icon"></span>
-                  <span class="--date">31 июля 2022г.</span>
+                  <span class="--date"><?= $review['review-date'] ?></span>
                 </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
+                <p class="text">
+                  <?= $review['review-text'] ?>
                 </p>
                 <div class="location">
                   <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
+                  <span class="--location"><?= $review['review-location'] ?></span>
                 </div>
                 <div class="profile">
                   <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
+                    <img src="<?= $review['review-img'] ?>" alt="Аватар пользователя" class="avatar">
                   </a>
                   <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
+                    <span class="name"><?= $review['review-name'] ?></span>
                   </a>
                 </div>
               </li>
             </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-            <div class="swiper-slide">
-              <li class="review-card">
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date">21 февраля 2022г.</span>
-                </div>
-                <p class="text">Историческое здание Саратовского Радищевского музея - двухэтажное
-                  кирпичное с
-                  полуподвалом.
-                  Построено специально для музея и рисовальной школы в 1883-1885 годах по проекту
-                  архитектора
-                  И.В. Штрома. С 1924 года музей занимает здание полностью.
-                </p>
-                <div class="location">
-                  <span class="icon location-icon"></span>
-                  <span class="--location">г. Москва</span>
-                </div>
-                <div class="profile">
-                  <a href="#" class="avatar-link">
-                    <img src="<?php bloginfo('template_url'); ?>/assets/content/avatar-img.jpg" alt="Аватар пользователя" class="avatar">
-                  </a>
-                  <a href="#" class="name-link">
-                    <span class="name">Пшеничников Иван Степанович</span>
-                  </a>
-                </div>
-              </li>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-navigation">
-          <div class="swp-button swiper-button-prev">
-            <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
-            </svg>
+          <?php
+          }
+          echo '</div>'
+          ?>
+          <div class="swiper-navigation">
+            <div class="swp-button swiper-button-prev">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+              </svg>
 
-          </div>
-          <div class="swiper-pagination"></div>
-          <div class="swp-button swiper-button-next">
-            <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
-            </svg>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swp-button swiper-button-next">
+              <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+              </svg>
 
+            </div>
           </div>
         </div>
         <!-- </ul> -->
       </div>
+    </section>
+  </main>
+
+  <main data-main-info>
+    <section data-info-detail class="news-detail">
+      <?php for ($i = 0; $i < count($posts); $i++) { ?>
+
+        <div class="wrapper" data-main-number="<?= $i ?>" style="display: none;">
+          <div class="breadcrumb">
+            <ul class="bc-list">
+              <li class="bc-item">
+                <a href="/" class="bc-link dsf">Главная</a>
+              </li>
+              <li class="bc-item">
+                <a href="/news" class="bc-link">Новости</a>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="title"><?= $posts[$i]['event-title'] ?></h2>
+          <div class="date">
+            <span class="icon calendar-icon"></span>
+            <span class="--date"><?= $posts[$i]['event-date'] ?></span>
+          </div>
+          <div class="text-content">
+            <?= $posts[$i]['event-description-full']  ?>
+          </div>
+          <div class="swiper first-swiper rr">
+            <?php
+            $photos_news = $posts[$i]['event-all-img'];
+            echo '<div class="swiper-wrapper">';
+            foreach ($photos_news as $photo) {
+            ?>
+              <div class="swiper-slide">
+                <img src=" <?= $photo ?> " alt="" class="img">
+              </div>
+            <?php
+            }
+            echo '</div>'
+            ?>
+            <div class="swiper-navigation">
+              <div class="swp-button swiper-button-prev">
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+                </svg>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swp-button swiper-button-next">
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        echo "</div>";
+      }
+        ?>
+
     </section>
   </main>
 

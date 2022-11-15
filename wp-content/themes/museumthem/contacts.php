@@ -41,7 +41,7 @@ Template Name: contacts
       <li class="burger-nav-item active">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: contacts
             <li class="nav-item active">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -183,96 +183,37 @@ Template Name: contacts
         </div>
         <h2 class="title">Контакты</h2>
         <div class="contact">
-          <?php
-          global $post;
 
-          $myposts = get_posts([
-            'numberposts' => 1,
-            'category_name' => 'con-phone'
-          ]);
+          <div class="telnumber">
+            <span class="icon tel-icon"></span>
+            <a href="tel:<?php the_field('phone-unformat'); ?>"> <?php the_field('phone-number'); ?></a>
+            </span>
+          </div>
 
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
-          ?>
-              <div class="telnumber">
-                <span class="icon tel-icon"></span>
-                <a href="tel:74812380917"> <?php the_content() ?></a>
-                </span>
-                <br>
-              </div>
-          <?php }
-          }
-          wp_reset_postdata(); ?>
-
-
-          <?php
-          global $post;
-
-          $myposts = get_posts([
-            'numberposts' => 1,
-            'category_name' => 'con-mail'
-          ]);
-
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
-          ?>
-              <div class="mail rf">
-                <span class="icon mail-icon"></span>
-                <a href="mailto:<?php the_content() ?>"><?php the_content() ?></a>
-              </div>
-          <?php }
-          }
-          wp_reset_postdata(); ?>
-
+          <div class="mail">
+            <span class="icon mail-icon"></span>
+            <a href="mailto:<?php the_field('mail') ?>"><?php the_field('mail') ?></a>
+          </div>
         </div>
         <h2 class="title title--litle">Схема проезда</h2>
         <div class="content">
           <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aab7957cb5ffe8c99dead693709bde212dd0d0359ea38ec3c618aaee7bf3df14d&amp;source=constructor" frameborder="0" class="map"></iframe>
           <div class="info">
             <h3 class="subtitle">Адрес и часы работы</h3>
-            <?php
-            global $post;
 
-            $myposts = get_posts([
-              'numberposts' => 1,
-              'category_name' => 'con-address'
-            ]);
-
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <address>
-                  <span class="icon map-icon"></span>
-                  <?php the_content() ?>
-                </address>
-            <?php }
-            }
-            wp_reset_postdata(); ?>
+            <address>
+              <span class="icon map-icon"></span>
+              <?php the_field('address') ?>
+            </address>
 
             <br>
 
-            <?php
-            global $post;
 
-            $myposts = get_posts([
-              'numberposts' => 1,
-              'category_name' => 'con-timetable'
-            ]);
+            <div class="timedate">
+              <span class="icon time-icon"></span>
+              <?php the_field('time') ?>
+            </div>
 
-            if ($myposts) {
-              foreach ($myposts as $post) {
-                setup_postdata($post);
-            ?>
-                <div class="timedate">
-                  <span class="icon time-icon"></span>
-                  <?php the_content() ?>
-                </div>
-            <?php }
-            }
-            wp_reset_postdata(); ?>
             <br>
 
             <a href="/prices" class="buy-btn">

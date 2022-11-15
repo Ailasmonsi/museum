@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'imagely/nextgen-gallery',
+        'pretty_version' => '3.5.0',
+        'version' => '3.5.0.0',
+        'reference' => NULL,
+        'type' => 'wordpress-plugin',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        'ezyang/htmlpurifier' => array(
+            'pretty_version' => 'v4.16.0',
+            'version' => '4.16.0.0',
+            'reference' => '523407fb06eb9e5f3d59889b3978d5bfe94299c8',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../ezyang/htmlpurifier',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'imagely/nextgen-gallery' => array(
+            'pretty_version' => '3.5.0',
+            'version' => '3.5.0.0',
+            'reference' => NULL,
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'imagely/pope-framework' => array(
+            'pretty_version' => 'v0.17',
+            'version' => '0.17.0.0',
+            'reference' => '13da4d47779a91fbf07a68062e64974eb1427ef2',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../imagely/pope-framework',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);

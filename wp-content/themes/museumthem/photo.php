@@ -41,7 +41,7 @@ Template Name: photo
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: photo
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -182,147 +182,59 @@ Template Name: photo
           </ul>
         </div>
         <h2 class="title">Фотогаллерея</h2>
-        <ul class="photo-list">
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo1.jpg" alt="Наши мероприятия" class="photo">
-            </a>
-            <a href="#" class="cat-link" role="link">
-              <h4 class="cat-name">Наши мероприятия</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo2.jpg" alt="Конкурс Космонавты XXI века" class="photo">
-            </a>
-            <a href="#" class="cat-link" role="link">
-              <h4 class="cat-name">Конкурс Космонавты XXI века</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo3.jpg" alt="Всероссийский Нахимовский праздник. Хмелита" class="photo">
-            </a>
-            <a class="see-all">
-              Посмотреть все фото
-              <span class="icon next-icon">
-                <svg width="46" height="20" viewBox="0 0 46 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10" cy="10" r="9.5" stroke="" />
-                  <path d="M45.3536 10.3536C45.5488 10.1583 45.5488 9.84171 45.3536 9.64645L42.1716 6.46447C41.9763 6.26921 41.6597 6.26921 41.4645 6.46447C41.2692 6.65973 41.2692 6.97631 41.4645 7.17158L44.2929 10L41.4645 12.8284C41.2692 13.0237 41.2692 13.3403 41.4645 13.5355C41.6597 13.7308 41.9763 13.7308 42.1716 13.5355L45.3536 10.3536ZM10 10.5L45 10.5L45 9.5L10 9.5L10 10.5Z" fill="#999999" />
-                </svg>
+        <?php
+        $photos = get_field('photo');
+        echo '<ul class="photo-list">';
+        for ($i = 0; $i < count($photos); $i++) {
+        ?>
 
-              </span>
+          <li class="photo-item magnig-item">
 
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">Всероссийский Нахимовский праздник. Хмелита</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo4.jpg" alt="День Военно-Морского Флота" class="photo">
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">День Военно-Морского Флота</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo5.jpg" alt="Морское братство - нерушимо! Смоленск - Витебск" class="photo">
-            </a>
-            <a class="see-all">
-              Посмотреть все фото
-              <span class="icon next-icon">
-                <svg width="46" height="20" viewBox="0 0 46 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10" cy="10" r="9.5" stroke="" />
-                  <path d="M45.3536 10.3536C45.5488 10.1583 45.5488 9.84171 45.3536 9.64645L42.1716 6.46447C41.9763 6.26921 41.6597 6.26921 41.4645 6.46447C41.2692 6.65973 41.2692 6.97631 41.4645 7.17158L44.2929 10L41.4645 12.8284C41.2692 13.0237 41.2692 13.3403 41.4645 13.5355C41.6597 13.7308 41.9763 13.7308 42.1716 13.5355L45.3536 10.3536ZM10 10.5L45 10.5L45 9.5L10 9.5L10 10.5Z" fill="#999999" />
-                </svg>
+            <?php
+            echo '<div class="img-link">';
+            $photo_of_galery = $photos[$i]['photo-galery'];
 
-              </span>
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">Морское братство - нерушимо! Смоленск - Витебск</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo6.jpg" alt="Видеоконференция 'Стань моряком!'" class="photo">
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">Видеоконференция "Стань моряком!"</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo7.jpg" alt="Смоленские купола" class="photo">
-            </a>
-            <div class="see-all">
-              Посмотреть все фото
-              <span class="icon next-icon">
-                <svg width="46" height="20" viewBox="0 0 46 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="10" cy="10" r="9.5" stroke="" />
-                  <path d="M45.3536 10.3536C45.5488 10.1583 45.5488 9.84171 45.3536 9.64645L42.1716 6.46447C41.9763 6.26921 41.6597 6.26921 41.4645 6.46447C41.2692 6.65973 41.2692 6.97631 41.4645 7.17158L44.2929 10L41.4645 12.8284C41.2692 13.0237 41.2692 13.3403 41.4645 13.5355C41.6597 13.7308 41.9763 13.7308 42.1716 13.5355L45.3536 10.3536ZM10 10.5L45 10.5L45 9.5L10 9.5L10 10.5Z" fill="#999999" />
-                </svg>
+            ?>
+            <img src="<?= $photo_of_galery[0] ?>" alt="" class="photo">
+            <?php
+            echo '</div>'
+            ?>
 
-              </span>
+            <?php
+            for ($j = 0; $j < count($photo_of_galery); $j++) {
+              if ($j == 0) {
+            ?>
+                <a href="<?= $photo_of_galery[$j] ?>" class="see-all">
+                  Посмотреть все фото
+                  <span class="icon next-icon">
+                    <svg width="46" height="20" viewBox="0 0 46 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="10" cy="10" r="9.5" stroke="" />
+                      <path d="M45.3536 10.3536C45.5488 10.1583 45.5488 9.84171 45.3536 9.64645L42.1716 6.46447C41.9763 6.26921 41.6597 6.26921 41.4645 6.46447C41.2692 6.65973 41.2692 6.97631 41.4645 7.17158L44.2929 10L41.4645 12.8284C41.2692 13.0237 41.2692 13.3403 41.4645 13.5355C41.6597 13.7308 41.9763 13.7308 42.1716 13.5355L45.3536 10.3536ZM10 10.5L45 10.5L45 9.5L10 9.5L10 10.5Z" fill="/photo-detail999999" />
+                    </svg>
+                  </span>
+                </a>
+              <?php
+              } else {
+              ?>
+                <a href="<?= $photo_of_galery[$j] ?>" style="display: none;">
+                </a>
+            <?php
+              }
+            }
+            ?>
+            <div class="cat-link" role="link">
+              <h4 class="cat-name"><?= $photos[$i]['photo-title'] ?></h4>
             </div>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">Смоленские купола</h4>
-            </a>
             <div class="date">
               <span class="icon calendar-icon"></span>
-              28 июля 2022г.
+              <?= $photos[$i]['photo-date'] ?>
             </div>
           </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo8.jpg" alt="Отечественная война глазами детей" class="photo">
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">Отечественная война глазами детей</h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-          <li class="photo-item">
-            <a href="#" class="img-link">
-              <img src="<?php bloginfo('template_url'); ?>/assets/content/img/photo9.jpg" alt="215 лет со дня рождения А.И. Казарского. Дубровно" class="photo">
-            </a>
-            <a href="#" class="cat-link">
-              <h4 class="cat-name">215 лет со дня рождения А.И. Казарского. Дубровно </h4>
-            </a>
-            <div class="date">
-              <span class="icon calendar-icon"></span>
-              28 июля 2022г.
-            </div>
-          </li>
-        </ul>
+        <?php
+        }
+        echo '</ul>';
+        ?>
+
         <button class="load-btn">Смотреть еще</button>
       </div>
     </section>

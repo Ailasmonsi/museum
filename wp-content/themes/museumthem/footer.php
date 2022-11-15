@@ -14,7 +14,7 @@
                  </li>
                  <li class="nav-item">
                    <a href="/photo" class="nav-link" role="link">
-                     Фотогаллерея
+                     Фотогалерея
                    </a>
                  </li>
                  <li class="nav-item">

@@ -41,7 +41,7 @@ Template Name: news
       <li class="burger-nav-item">
         <a href="/contacts" class="burger-nav-link">Контакты</a>
       </li>
-		<li class="burger-nav-item">
+      <li class="burger-nav-item">
         <a href="/review" class="burger-nav-link">Отзывы</a>
       </li>
       <li class="burger-nav-item">
@@ -155,7 +155,7 @@ Template Name: news
             <li class="nav-item">
               <a href="/contacts" class="nav-link" role="link">Контакты</a>
             </li>
-			  <li class="nav-item">
+            <li class="nav-item">
               <a href="/review" class="nav-link" role="link">Отзывы</a>
             </li>
             <li class="nav-item nav-item-mo">
@@ -167,7 +167,7 @@ Template Name: news
       </div>
     </div>
   </header>
-  <main>
+  <main data-main>
     <section class="news">
       <div class="wrapper">
         <div class="breadcrumb">
@@ -181,43 +181,93 @@ Template Name: news
           </ul>
         </div>
         <h2 class="title">Новости</h2>
-        <ul class="card-list">
 
-          <?php
-          global $post;
 
-          $myposts = get_posts([
-            'numberposts' => -1,
-            'category_name' => 'news'
-          ]);
-
-          if ($myposts) {
-            foreach ($myposts as $post) {
-              setup_postdata($post);
-          ?>
-              <li class="card">
-                <a href="/news-detail" class="img-link">
-                  <?php the_post_thumbnail(
-                    array(330, 290),
-                    array(
-                      'class' => 'card-img'
-                    )
-                  ) ?>
-                </a>
-                <h3 class="subtitle"><?php the_title() ?></h3>
-                <div class="date">
-                  <span class="icon calendar-icon"></span>
-                  <span class="--date"><?php the_date('d F Yг.') ?></span>
-                </div>
-                <div class="descr"><?php the_content() ?></div>
-                <a href="/news-detail" class="btn outline-btn btn-more" role="link">Подробнее</a>
-              </li>
-          <?php }
-          }
-          wp_reset_postdata(); ?>
-
+        <?php
+        $posts = get_field('event');
+        echo '<ul class="card-list">';
+        for ($i = 0; $i < count($posts); $i++) {
+        ?>
+          <li class="card">
+            <div data-post data-value="<?= $i ?>" class="img-link">
+              <img src="<?= $posts[$i]['event-img'] ?>" alt="" class="card-img">
+            </div>
+            <div data-post data-value="<?= $i ?>">
+              <h3 class="subtitle"><?= $posts[$i]['event-title'] ?></h3>
+            </div>
+            <div class="date">
+              <span class="icon calendar-icon"></span>
+              <span class="--date"><?= $posts[$i]['event-date'] ?></span>
+            </div>
+            <div class="descr"><?= $posts[$i]['event-description'] ?> </div>
+            <div data-post data-value="<?= $i ?>" class="btn outline-btn btn-more" role="link">Подробнее</div>
+          </li>
+        <?php
+        }
+        echo '</ul>';
+        ?>
         </ul>
       </div>
+    </section>
+  </main>
+
+  <main data-main-info>
+    <section data-info-detail class="news-detail">
+      <?php for ($i = 0; $i < count($posts); $i++) { ?>
+
+        <div class="wrapper" data-main-number="<?= $i ?>" style="display: none;">
+          <div class="breadcrumb">
+            <ul class="bc-list">
+              <li class="bc-item">
+                <a href="/" class="bc-link dsf">Главная</a>
+              </li>
+              <li class="bc-item">
+                <a href="/news" class="bc-link">Новости</a>
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="title"><?= $posts[$i]['event-title'] ?></h2>
+          <div class="date">
+            <span class="icon calendar-icon"></span>
+            <span class="--date"><?= $posts[$i]['event-date'] ?></span>
+          </div>
+          <div class="text-content">
+            <?= $posts[$i]['event-description-full']  ?>
+          </div>
+          <div class="swiper first-swiper rr">
+            <?php
+            $photos_news = $posts[$i]['event-all-img'];
+            echo '<div class="swiper-wrapper">';
+            foreach ($photos_news as $photo) {
+            ?>
+              <div class="swiper-slide">
+                <img src=" <?= $photo ?> " alt="" class="img">
+              </div>
+            <?php
+            }
+            echo '</div>'
+            ?>
+            <div class="swiper-navigation">
+              <div class="swp-button swiper-button-prev">
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.939339 13.0607C0.353554 12.4749 0.353554 11.5251 0.939339 10.9393L10.4853 1.3934C11.0711 0.807617 12.0208 0.807617 12.6066 1.3934C13.1924 1.97919 13.1924 2.92894 12.6066 3.51472L4.12132 12L12.6066 20.4853C13.1924 21.0711 13.1924 22.0208 12.6066 22.6066C12.0208 23.1924 11.0711 23.1924 10.4853 22.6066L0.939339 13.0607ZM80 13.5L2 13.5L2 10.5L80 10.5L80 13.5Z" fill="#333333" />
+                </svg>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="swp-button swiper-button-next">
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M79.0607 13.0607C79.6464 12.4749 79.6464 11.5251 79.0607 10.9393L69.5147 1.3934C68.9289 0.807617 67.9792 0.807617 67.3934 1.3934C66.8076 1.97919 66.8076 2.92894 67.3934 3.51472L75.8787 12L67.3934 20.4853C66.8076 21.0711 66.8076 22.0208 67.3934 22.6066C67.9792 23.1924 68.9289 23.1924 69.5147 22.6066L79.0607 13.0607ZM-1.31134e-07 13.5L78 13.5L78 10.5L1.31134e-07 10.5L-1.31134e-07 13.5Z" fill="#333333" />
+                </svg>
+              </div>
+            </div>
+
+          </div>
+        <?php
+        echo "</div>";
+      }
+        ?>
+
     </section>
   </main>
 

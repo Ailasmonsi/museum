@@ -90,19 +90,19 @@ msgstr "Резервная копия зашифрована"
 msgid "Unable to check decryption password. Refresh the page and try again"
 msgstr "Невозможно проверить пароль для расшифровки. Обновите страницу и попробуйте еще раз"
 
-#: functions.php:2068
+#: functions.php:2075
 msgid "Unable to decrypt data."
 msgstr "Невозможно расшифровать данные."
 
-#: functions.php:2046
+#: functions.php:2053
 msgid "Unable to obtain cipher length."
 msgstr "Невозможно получить длину шифра."
 
-#: functions.php:2031
+#: functions.php:2038
 msgid "Unable to encrypt data."
 msgstr "Невозможно расшифровать данные."
 
-#: functions.php:2026
+#: functions.php:2033
 msgid "Unable to generate random bytes."
 msgstr "Невозможно сгенерировать произвольные байты."
 
@@ -470,7 +470,7 @@ msgid "Drag & Drop a backup to import it"
 msgstr "Для импорта перетащите резервную копию сюда"
 
 #: lib/model/export/class-ai1wm-export-database.php:79
-#: lib/model/export/class-ai1wm-export-database.php:188
+#: lib/model/export/class-ai1wm-export-database.php:191
 msgid "Exporting database...<br />%d%% complete<br />%s records saved"
 msgstr "Экспортируем базу данных...<br />%d%% завершено<br />%s записей сохранено"
 
@@ -615,31 +615,31 @@ msgstr "Невозможно начать экспорт. Обновите ст�
 msgid "You are about to stop exporting your website, are you sure?"
 msgstr "Вы действительно хотите остановить экспорт Вашего веб-сайта?"
 
-#: functions.php:1671
+#: functions.php:1678
 msgid "Unable to authenticate the secret key. <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно установить подлинность секретного ключа <a href=\"https://help.servmask.com/knowledgebase/invalid-secret-key/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1537
+#: functions.php:1544
 msgid "Unable to get current pointer position of %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно получить текущую позицию указателя в %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1520
+#: functions.php:1527
 msgid "Unable to seek to offset %d on %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно найти оффсет %d на %s. <a href=\"https://help.servmask.com/knowledgebase/php-32bit/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1498
+#: functions.php:1505
 msgid "Unable to read file: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно прочитать файл: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1478
+#: functions.php:1485
 msgid "Out of disk space. Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">Technical details</a>"
 msgstr "Недостаточно дискового пространства. Невозможно записать в: %s. <a href=\"https://help.servmask.com/knowledgebase/out-of-disk-space/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1472 functions.php:1556
+#: functions.php:1479 functions.php:1563
 msgid "Unable to write to: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно записать в: %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Технические детали</a>"
 
-#: functions.php:1453
+#: functions.php:1460
 msgid "Unable to open %s with mode %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Technical details</a>"
 msgstr "Невозможно открыть %s в режиме %s. <a href=\"https://help.servmask.com/knowledgebase/invalid-file-permissions/\" target=\"_blank\">Технические детали</a>"
 
@@ -1053,7 +1053,7 @@ msgstr "Восстановление %d файлов...<br />%d%% complete"
 msgid "Renaming exported file..."
 msgstr "Переименование экспортируемого файла..."
 
-#: lib/model/export/class-ai1wm-export-database.php:162
+#: lib/model/export/class-ai1wm-export-database.php:165
 msgid "Done exporting database."
 msgstr "Экспортирование базы данных завершено."
 

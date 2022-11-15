@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif, "Prata" !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif, "Prata" !important;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -242,7 +243,7 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -348,9 +349,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -358,9 +359,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -369,9 +370,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -421,8 +422,8 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -432,8 +433,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -441,7 +442,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -451,7 +452,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -534,7 +535,7 @@ template {
 }
 .header .top-header .main-nav-list .nav-link:hover {
   transition: 0.13s;
-  color: #002E48 !important;
+  color: #002e48 !important;
 }
 .header .top-header .main-nav-list .nav-link-join {
   font-family: "Roboto";
@@ -542,7 +543,7 @@ template {
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 23px;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .header .bottom-header {
   width: 100%;
@@ -574,7 +575,7 @@ template {
 }
 .header .bottom-header .nav-list .nav-link:hover {
   transition: 0.13s;
-  color: #5F7489 !important;
+  color: #5f7489 !important;
 }
 .header .bottom-header .nav-list .nav-item {
   position: relative;
@@ -598,7 +599,7 @@ template {
 }
 
 .active .nav-link {
-  color: #5F7489 !important;
+  color: #5f7489 !important;
 }
 .active::after {
   position: absolute;
@@ -607,7 +608,7 @@ template {
   bottom: 0;
   left: 0;
   height: 2px;
-  background-color: #5F7489;
+  background-color: #5f7489;
   transition: opacity 0.1s ease;
 }
 
@@ -726,18 +727,6 @@ template {
   background-image: url("../content/icons/pushkin-icon.png");
 }
 
-.clear-icon {
-  width: 16px;
-  height: 96px;
-  background-image: url(../content/icons/clear-icon.svg);
-}
-
-.send-icon {
-  width: 28px;
-  height: 25px;
-  background-image: url(../content/icons/send-icon.svg);
-}
-
 .wrapper {
   width: 100%;
   height: 100%;
@@ -749,12 +738,13 @@ template {
 
 .title {
   margin-bottom: 2.25rem;
-  font-family: "Prata", "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Prata", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 2.6875rem;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 
 .image-swiper {
@@ -786,7 +776,8 @@ template {
   background-position: center;
   align-self: center;
 }
-.swp-button::after, .swp-button::before {
+.swp-button::after,
+.swp-button::before {
   content: none;
 }
 
@@ -807,12 +798,13 @@ template {
   font-weight: 400;
   font-size: 32px;
   line-height: 43px;
-  color: #5F7489;
+  color: #5f7489;
 }
 
 .swiper-pagination-current,
 .swiper-pagination-total {
-  font-family: "Prata", "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Prata", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif !important;
 }
 
 .swiper-pagination-total {
@@ -832,7 +824,10 @@ template {
   border-radius: 0 !important;
   top: -10px;
   position: absolute;
-  background-color: #728BAD;
+  background-color: #728bad;
+}
+.btn {
+  cursor: pointer;
 }
 
 .load-btn {
@@ -850,7 +845,7 @@ template {
   line-height: 1rem;
   background: none;
   color: #999;
-  border: 1px solid #5F7489;
+  border: 1px solid #5f7489;
   cursor: pointer;
 }
 .load-btn:active {
@@ -859,8 +854,8 @@ template {
 }
 .load-btn:hover {
   transition: 0.13s;
-  color: #1B1B1B;
-  background-color: #5F7489;
+  color: #1b1b1b;
+  background-color: #5f7489;
 }
 
 .card-list {
@@ -884,24 +879,27 @@ template {
   width: 100%;
   max-width: 397px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .card .subtitle {
   max-width: 380px;
   margin-top: 30px;
   margin-bottom: 25px;
-  font-family: "Open Sans", "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Open Sans", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif !important;
   font-style: normal;
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 2.0625rem;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .card .descr {
+  flex: 1 1 auto;
   max-width: 100%;
   margin-top: 22px;
   margin-bottom: 20px;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -914,17 +912,18 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
   color: #000000;
-  border: 1px solid #5F7489;
+  border: 1px solid #5f7489;
   transition: 0.1s ease background-color;
 }
 .card .outline-btn:hover {
-  background-color: #5F7489;
+  background-color: #5f7489;
 }
 .card .outline-btn:active {
   transition: 0.15s;
@@ -1015,12 +1014,12 @@ template {
   line-height: 19px;
   color: #ffffff !important;
   -webkit-text-decoration-color: rgba(0, 0, 0, 0);
-          text-decoration-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 .find-container .rezults-list .rezult-link:hover {
   text-decoration: underline;
   -webkit-text-decoration-color: #ffffff;
-          text-decoration-color: #ffffff;
+  text-decoration-color: #ffffff;
   transition: 0.15s;
 }
 
@@ -1040,7 +1039,7 @@ template {
   display: flex;
   align-items: center;
   -moz-column-gap: 17px;
-       column-gap: 17px;
+  column-gap: 17px;
 }
 .bc-list .bc-item {
   position: relative;
@@ -1055,7 +1054,7 @@ template {
 }
 .bc-list .bc-item .bc-link:hover {
   transition: 0.13s;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .bc-list .bc-item:not(:first-child)::before {
   position: relative;
@@ -1083,7 +1082,8 @@ template {
   fill: none;
   stroke: black;
   stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .line1 {
@@ -1152,7 +1152,7 @@ template {
   font-weight: 400;
   font-size: 18px;
   line-height: 120%;
-  color: #1B1B1B;
+  color: #1b1b1b;
   text-align: center;
 }
 .burger-menu .search-icon {
@@ -1231,7 +1231,8 @@ template {
   row-gap: 1.5rem;
 }
 .about-mus .text {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.9375rem;
@@ -1241,7 +1242,7 @@ template {
 }
 .about-mus .about-img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   max-width: 400px;
   flex-shrink: 0;
@@ -1272,11 +1273,12 @@ template {
   display: flex;
   align-items: center;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 
 .--date {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1288,11 +1290,12 @@ template {
   display: flex;
   align-items: center;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
 }
 
 .--location {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1305,19 +1308,20 @@ template {
   display: flex;
   align-items: center;
   -moz-column-gap: 15px;
-       column-gap: 15px;
+  column-gap: 15px;
 }
 .profile .avatar {
   width: 100%;
   max-width: 40px;
   max-height: 40px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
 }
 .profile .name {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1345,7 +1349,8 @@ template {
 .reviews .review-card .text {
   margin-top: 52px;
   margin-bottom: 41px;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -1356,7 +1361,7 @@ template {
 .footer {
   width: 100%;
   min-height: 560px;
-  background-color: #002E48;
+  background-color: #002e48;
 }
 .footer .top-footer {
   padding-top: 65px;
@@ -1391,7 +1396,8 @@ template {
   row-gap: 0.875rem;
 }
 .footer .top-footer .top-content .nav-list .nav-link {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1399,17 +1405,18 @@ template {
   color: #fff;
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(0, 0, 0, 0);
-          text-decoration-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 .footer .top-footer .top-content .nav-list .nav-link:hover {
   transition: 0.1s;
   -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 .footer .top-footer .top-content .nav-link-mo {
   display: inline-block;
   max-width: 294px;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
@@ -1417,12 +1424,12 @@ template {
   color: #ffffff;
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(0, 0, 0, 0);
-          text-decoration-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 .footer .top-footer .top-content .nav-link-mo:hover {
   transition: 0.1s;
   -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 .footer .top-footer .top-content .socials-list {
   margin-bottom: 20px;
@@ -1430,7 +1437,7 @@ template {
   align-items: center;
   flex-wrap: wrap;
   -moz-column-gap: 1.25rem;
-       column-gap: 1.25rem;
+  column-gap: 1.25rem;
 }
 .footer .top-footer .top-content address {
   margin-bottom: 52px;
@@ -1438,7 +1445,8 @@ template {
   flex-direction: column;
   align-items: start;
   row-gap: 20px;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
@@ -1456,7 +1464,8 @@ template {
 }
 .footer .title {
   margin-bottom: 20px;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 1.25rem;
@@ -1491,7 +1500,8 @@ template {
   z-index: 2;
 }
 .footer .bottom-footer .nav-list .nav-link {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
@@ -1501,17 +1511,18 @@ template {
   color: #fff;
   text-decoration: underline;
   -webkit-text-decoration-color: rgba(0, 0, 0, 0);
-          text-decoration-color: rgba(0, 0, 0, 0);
+  text-decoration-color: rgba(0, 0, 0, 0);
 }
 .footer .bottom-footer .nav-list .nav-link:hover {
   transition: 0.1s;
   -webkit-text-decoration-color: #fff;
-          text-decoration-color: #fff;
+  text-decoration-color: #fff;
 }
 .footer .bottom-footer .copyrights {
   width: 100%;
   text-align: center;
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 0.75rem;
@@ -1524,12 +1535,17 @@ template {
 .mail-rating {
   width: 169px;
   height: 44px;
-  background-image: url(../assets/footer-mailing.png);
+  background-image: url(../content/footer-mailing.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
-
+.hall-body {
+  display: none;
+}
+.hall-body._active {
+  display: block;
+}
 .col {
   display: flex;
   flex-direction: column;
@@ -1559,18 +1575,41 @@ template {
   align-items: start;
   row-gap: 1.5rem;
 }
-.news-detail .text {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+[data-post] {
+  cursor: pointer;
+}
+.rr {
+  max-height: unset !important;
+}
+.news-detail .text-content {
+  margin-bottom: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  row-gap: 1.5rem;
+}
+.news-detail .text-content p {
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
 }
+.news-detail .text {
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+}
+
 .news-detail .swiper-slide .image {
   width: 100%;
   max-width: 607px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .news-detail .swiper-navigation {
   margin-top: 80px;
@@ -1580,16 +1619,22 @@ template {
 .gallery .wrapper {
   flex-direction: column;
   align-items: start;
+  margin-bottom: 91px;
 }
 .gallery .photo-list {
   display: flex;
   -moz-column-gap: 26px;
-       column-gap: 26px;
+  column-gap: 26px;
   row-gap: 107px;
   flex-wrap: wrap;
   justify-content: center;
 }
+.gallery .load-btn {
+  margin-top: 139px;
+}
+
 .gallery .photo-list .photo-item {
+  position: relative;
   width: 100%;
   max-width: 329px;
   display: flex;
@@ -1603,51 +1648,85 @@ template {
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 2.0625rem;
-  color: #1B1B1B;
+  color: #1b1b1b;
   cursor: pointer;
 }
 .gallery .photo-list .photo-item .photo {
   width: 100%;
-  max-width: 100%;
-  max-height: 100%;
+  height: 100vh;
+  max-width: 329px;
+  max-height: 329px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-.gallery .photo-list .photo-item .img-link:hover + .see-all {
-  color: #1B1B1B;
-  background-color: #5F7489;
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
 }
-.gallery .photo-list .photo-item .img-link:hover + .see-all svg circle {
-  stroke: #1B1B1B !important;
+/* overlay animate in */
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8;
 }
-.gallery .photo-list .photo-item .img-link:hover + .see-all svg path {
-  stroke: #1B1B1B !important;
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  transform: scale(0);
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+  transform: scale(1);
+}
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+.gallery .photo-list .photo-item:hover .see-all {
+  opacity: 1 !important;
+  background-color: #5f7489;
 }
 .gallery .photo-list .photo-item .see-all {
+  right: 0;
+  bottom: 140px;
   width: 100%;
   height: 48px;
+  position: absolute;
+  opacity: 0;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1rem;
-  color: #999;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #5F7489;
+  border: 1px solid #5f7489;
   cursor: pointer;
-  transition: background-color 0.13s ease, color 0.13s ease;
+  transition: background-color 0.13s ease, color 0.13s ease, opacity 0.13s ease;
+  background-color: #5f7489;
 }
 .gallery .photo-list .photo-item .see-all:hover {
-  color: #1B1B1B;
-  background-color: #5F7489;
+  color: #1b1b1b;
+  background-color: #5f7489;
 }
 .gallery .photo-list .photo-item .see-all:hover svg circle {
-  stroke: #1B1B1B !important;
+  stroke: #1b1b1b !important;
 }
 .gallery .photo-list .photo-item .see-all:hover svg path {
-  stroke: #1B1B1B !important;
+  stroke: #1b1b1b !important;
 }
 .gallery .photo-list .photo-item .see-all:active {
   transition: 0.15s;
@@ -1656,8 +1735,9 @@ template {
 .gallery .photo-list .photo-item .see-all .next-icon {
   margin-left: 1.75rem;
 }
-.gallery .photo-list .photo-item .see-all svg circle {
-  stroke: #999;
+.gallery .photo-list .photo-item .see-all svg circle,
+.gallery .photo-list .photo-item .see-all svg path {
+  stroke: #fff;
 }
 .gallery .photo-list .photo-item .date {
   font-family: "Roboto";
@@ -1667,22 +1747,18 @@ template {
   line-height: 16px;
   color: #999999;
 }
-.gallery .load-btn {
-  margin-top: 139px;
-  margin-bottom: 91px;
-}
 
 .expo .wrapper {
   flex-direction: column;
   align-items: start;
 }
 .expo .menu-list {
-  margin-top: 1.6875rem;
+  margin-top: 3.6875rem;
   margin-bottom: 5.625rem;
   display: flex;
   align-items: center;
   -moz-column-gap: 0.9375rem;
-       column-gap: 0.9375rem;
+  column-gap: 0.9375rem;
 }
 .expo .menu-list button {
   border: none;
@@ -1696,7 +1772,7 @@ template {
   transition: color 0.13s ease;
 }
 .expo .menu-list button:hover {
-  color: #5F7489 !important;
+  color: #5f7489 !important;
 }
 .expo .swiper {
   max-height: none;
@@ -1718,7 +1794,7 @@ template {
   color: #333;
 }
 .expo .now {
-  color: #5F7489 !important;
+  color: #5f7489 !important;
 }
 
 .history {
@@ -1764,7 +1840,7 @@ template {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.1875rem;
-  color: #1B1B1B;
+  color: #1b1b1b;
   text-align: justify;
 }
 .history .see-more-btn {
@@ -1779,7 +1855,7 @@ template {
 }
 .history .selected {
   color: #fff !important;
-  background: #5F7489 !important;
+  background: #5f7489 !important;
 }
 
 .prices .see-more-btn {
@@ -1805,7 +1881,7 @@ template {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.4rem;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .prices .price-table {
   width: 100%;
@@ -1858,7 +1934,7 @@ template {
   font-size: 1rem;
   line-height: 1.1875rem;
   text-align: center;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .prices .offer-table {
   width: 100%;
@@ -1876,7 +1952,7 @@ template {
   font-size: 1rem;
   line-height: 1.1875rem;
   text-align: center;
-  color: #5F7489;
+  color: #5f7489;
   vertical-align: middle;
 }
 .prices .offer-table .table-cat {
@@ -1907,7 +1983,7 @@ template {
   font-size: 1rem;
   line-height: 1.1875rem;
   text-align: center;
-  color: #1B1B1B;
+  color: #1b1b1b;
   vertical-align: middle;
 }
 .prices .text {
@@ -1917,7 +1993,7 @@ template {
   font-weight: 400;
   font-size: 16px;
   line-height: 38px;
-  color: #1B1B1B;
+  color: #1b1b1b;
 }
 .prices .subheading {
   width: 100%;
@@ -1926,7 +2002,7 @@ template {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #5F7489;
+  background-color: #5f7489;
   font-size: 1rem;
   line-height: 1.1875rem;
   text-align: center;
@@ -1951,7 +2027,7 @@ template {
   font-size: 1rem;
   line-height: 1.1875rem;
   text-align: center;
-  color: #1B1B1B;
+  color: #1b1b1b;
   background-color: #d9d9d9;
   transition: background-color 0.13s ease;
 }
@@ -1994,7 +2070,7 @@ template {
   display: flex;
   align-items: start;
   -moz-column-gap: 3.75rem;
-       column-gap: 3.75rem;
+  column-gap: 3.75rem;
   justify-content: space-between;
 }
 .contacts .content .info {
@@ -2038,7 +2114,7 @@ template {
   width: 12.5rem;
   height: 3rem;
   margin-top: 2.0625rem;
-  background-color: #5F7489;
+  background-color: #5f7489;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2051,7 +2127,7 @@ template {
   transition: background-color 0.13s ease;
 }
 .contacts .content .buy-btn:hover {
-  background-color: #002E48;
+  background-color: #002e48;
 }
 .contacts .content .buy-btn:active {
   transition: 0.13s;
@@ -2073,7 +2149,8 @@ template {
   row-gap: 1.5rem;
 }
 .r-center .text {
-  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -2086,7 +2163,7 @@ template {
   margin: auto;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .r-center .swiper-navigation {
   margin-top: 80px;
@@ -2174,7 +2251,6 @@ template {
 .review .review-box {
   width: 100%;
   max-width: 812px;
-  min-height: 593px;
   margin: 56px auto 0 auto;
   padding: 42px 53px;
   background: rgba(0, 46, 72, 0.9);
@@ -2184,6 +2260,10 @@ template {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+.review .review-box .inputs span {
+  display: block;
+  width: 100%;
 }
 .review .review-box .inputs input {
   width: 100%;
@@ -2310,7 +2390,7 @@ template {
     height: 78px;
   }
   .header .top-header .main-nav-list,
-.header .top-header .toggle-find-btn {
+  .header .top-header .toggle-find-btn {
     display: none;
   }
   .header .top-header .menu {
@@ -2340,14 +2420,14 @@ template {
   .header .bottom-header .second-nav-list .nav-link {
     display: flex;
     align-items: center;
-    color: #5F7489;
+    color: #5f7489;
     transition: color 0.13s ease;
   }
   .header .bottom-header .second-nav-list .nav-link:hover {
-    color: #1B1B1B;
+    color: #1b1b1b;
   }
   .header .bottom-header .second-nav-list .nav-link-join {
-    color: #1B1B1B;
+    color: #1b1b1b;
   }
   .banner .wrapper {
     min-height: 440px;
@@ -2398,18 +2478,19 @@ template {
     font-weight: 400;
     font-size: 1rem;
     line-height: 15px;
-    color: #1B1B1B;
+    color: #1b1b1b;
     cursor: pointer;
     text-decoration: underline;
     -webkit-text-decoration-color: rgba(0, 0, 0, 0);
-            text-decoration-color: rgba(0, 0, 0, 0);
+    text-decoration-color: rgba(0, 0, 0, 0);
     transition: -webkit-text-decoration-color 0.13s ease;
     transition: text-decoration-color 0.13s ease;
-    transition: text-decoration-color 0.13s ease, -webkit-text-decoration-color 0.13s ease;
+    transition: text-decoration-color 0.13s ease,
+      -webkit-text-decoration-color 0.13s ease;
   }
   .see-more-btn:hover {
     -webkit-text-decoration-color: #000000;
-            text-decoration-color: #000000;
+    text-decoration-color: #000000;
   }
   .see-more-btn span {
     color: #9f0000;
@@ -2437,7 +2518,7 @@ template {
     margin-bottom: 35px;
   }
   .footer .top-footer .top-content address,
-.footer .top-footer .top-content .mail-rating {
+  .footer .top-footer .top-content .mail-rating {
     display: none !important;
   }
   .footer .top-footer .top-content .socials-list {
@@ -2454,7 +2535,7 @@ template {
     margin-bottom: 56px;
   }
   .footer .top-footer .bottom-content address,
-.footer .top-footer .bottom-content .mail-rating {
+  .footer .top-footer .bottom-content .mail-rating {
     display: inline-block;
   }
   .footer .top-footer .bottom-content address {
@@ -2463,7 +2544,8 @@ template {
     flex-direction: column;
     align-items: start;
     row-gap: 20px;
-    font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif !important;
+    font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif !important;
     font-style: normal;
     font-weight: 400;
     font-size: 0.75rem;
@@ -2471,7 +2553,7 @@ template {
     color: #ffffff;
   }
   .footer .top-footer .bottom-content address .tel,
-.footer .top-footer .bottom-content address .mail {
+  .footer .top-footer .bottom-content address .mail {
     display: block;
     font-style: normal;
     font-weight: 400;
@@ -2490,6 +2572,9 @@ template {
   .footer .bottom-footer .copyrights {
     margin-bottom: 16px;
   }
+  .gallery .load-btn {
+    margin-top: 43px;
+  }
   .gallery .photo-list {
     row-gap: 40px;
   }
@@ -2504,8 +2589,7 @@ template {
   .gallery .photo-list .photo-item .date {
     margin-top: 18px;
   }
-  .gallery .load-btn {
-    margin-top: 43px;
+  .gallery .wrapper {
     margin-bottom: 65px;
   }
   .history nav {
@@ -2545,7 +2629,7 @@ template {
     max-width: none;
     aspect-ratio: 1/1;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .expo .menu-list {
     flex-wrap: wrap;
@@ -2592,10 +2676,10 @@ template {
   }
   .review .review-box .actions {
     -moz-column-gap: 15px !important;
-         column-gap: 15px !important;
+    column-gap: 15px !important;
   }
   .review .review-box .actions .clear-btn,
-.review .review-box .actions .send-btn {
+  .review .review-box .actions .send-btn {
     font-size: 18px !important;
   }
   .review .captcha {
@@ -2619,6 +2703,34 @@ template {
     width: min-content;
   }
 }
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+}
+.send-btn {
+  display: flex;
+  align-items: center;
+}
+.clear-btn::after {
+  content: "";
+  width: 17px;
+  height: 20px;
+  background-image: url(../content/icons/clear-icon.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.send-btn::after {
+  content: "";
+  width: 26px;
+  height: 16px;
+  background-image: url(../content/icons/send-icon.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 @media (max-width: 620px) {
   .text {
     font-size: 15px !important;
@@ -2769,16 +2881,16 @@ template {
   .swiper .img {
     aspect-ratio: 1/1;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .swiper-navigation {
     margin-top: 40px !important;
     margin-bottom: 30px !important;
   }
   .prices .price-table .table-cat,
-.prices .price-table .person-cat,
-.prices .price-table .cat-value,
-.prices .price-table .value {
+  .prices .price-table .person-cat,
+  .prices .price-table .cat-value,
+  .prices .price-table .value {
     font-size: 9px !important;
     line-height: 11px !important;
     text-align: center;
@@ -2795,7 +2907,7 @@ template {
     margin-bottom: 51px;
   }
   .prices .subheading,
-.prices .free-ticket {
+  .prices .free-ticket {
     font-size: 11px !important;
     line-height: 13px;
   }
@@ -2806,7 +2918,7 @@ template {
     padding: 43px 17px !important;
   }
   .review .review-box .actions .send-btn,
-.review .review-box .actions .clear-btn {
+  .review .review-box .actions .clear-btn {
     font-size: 14px !important;
   }
 }
@@ -2817,7 +2929,6 @@ template {
 .review .review-box {
   width: 100%;
   max-width: 812px;
-  min-height: 593px;
   margin: 56px auto 158px auto;
   padding: 42px 53px;
   background: rgba(0, 46, 72, 0.9);
@@ -2828,7 +2939,7 @@ template {
   display: flex;
   flex-direction: column;
   align-items: start;
-  row-gap: 30px;
+  row-gap: 14px;
 }
 .review .review-box .inputs input {
   width: 100%;
@@ -2862,7 +2973,7 @@ template {
   font-weight: 400;
   font-size: 15px;
   line-height: 18px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .review .review-box .captcha .captcha-exmpl {
   width: 100%;
@@ -2870,21 +2981,21 @@ template {
   min-height: 45px;
   margin-left: auto;
   margin-right: 22px;
-  background: #D9D9D9;
-  border: 2px solid #FFFFFF;
+  background: #d9d9d9;
+  border: 2px solid #ffffff;
 }
 .review .review-box .captcha .captcha-answer {
   width: 100%;
   max-width: 215px;
   min-height: 45px;
-  background: #D9D9D9;
-  border: 2px solid #FFFFFF;
+  background: #d9d9d9;
+  border: 2px solid #ffffff;
 }
 .review .review-box .actions {
   display: flex;
   justify-content: flex-end;
   -moz-column-gap: 65px;
-       column-gap: 65px;
+  column-gap: 65px;
 }
 .review .review-box .actions .clear-btn,
 .review .review-box .actions .send-btn {
@@ -2896,7 +3007,7 @@ template {
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
 }
 .review .review-box .actions .clear-btn:hover,
@@ -2916,5 +3027,27 @@ template {
 }
 .review .reviews .review-card {
   max-width: 100%;
-  border-bottom: 1px solid #5F7489;
-}/*# sourceMappingURL=index.css.map */
+  border-bottom: 1px solid #5f7489;
+}
+
+.gallery .photogallery-list {
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 53px;
+  overflow: hidden;
+}
+.gallery .photogallery-list .photo-item {
+  width: 100%;
+  max-height: 400px;
+  max-width: 100%;
+}
+.gallery .photogallery-list .photo-item img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+} /*# sourceMappingURL=index.css.map */
